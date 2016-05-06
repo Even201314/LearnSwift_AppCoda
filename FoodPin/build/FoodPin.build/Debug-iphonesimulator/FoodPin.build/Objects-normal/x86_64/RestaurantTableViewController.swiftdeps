@@ -7,26 +7,35 @@ provides-member:
 - ["C7FoodPin29RestaurantTableViewController", ""]
 provides-dynamic-lookup:
 - "viewDidLoad"
-- "restaurantNames"
 - "restaurantTypes"
 - "restaurantLocations"
 - "numberOfSectionsInTableView"
+- "restaurantNames"
 - "didReceiveMemoryWarning"
 - "tableView"
 - "tableView"
+- "tableView"
 depends-top-level:
-- "StringLiteralType"
-- "UITableViewController"
-- "Int"
-- "NSIndexPath"
-- "RestaurantTableViewController"
-- "UITableViewCell"
-- !private "RestaurantTableViewCell"
-- "UITableView"
-- !private "UIImage"
 - "Array"
+- "NSIndexPath"
+- "StringLiteralType"
+- !private "UIAlertController"
+- !private "UIAlertAction"
+- "Int"
+- "UITableViewCell"
+- "RestaurantTableViewController"
+- "BooleanLiteralType"
+- !private "RestaurantTableViewCell"
+- "UITableViewController"
+- !private "Void"
+- "UITableView"
+- !private "+"
+- !private "UIImage"
 depends-member:
+- !private ["PSs9AnyObject", "UIAlertAction"]
+- !private ["PSs9AnyObject", "UIAlertController"]
 - !private ["PSs9AnyObject", "UIImage"]
+- !private ["PSs9AnyObject", "addAction"]
 - !private ["PSs9AnyObject", "dequeueReusableCellWithIdentifier"]
 - ["PSs9AnyObject", "didReceiveMemoryWarning"]
 - !private ["PSs9AnyObject", "image"]
@@ -34,6 +43,7 @@ depends-member:
 - !private ["PSs9AnyObject", "locationLabel"]
 - !private ["PSs9AnyObject", "nameLabel"]
 - ["PSs9AnyObject", "numberOfSectionsInTableView"]
+- !private ["PSs9AnyObject", "presentViewController"]
 - ["PSs9AnyObject", "restaurantLocations"]
 - ["PSs9AnyObject", "restaurantNames"]
 - ["PSs9AnyObject", "restaurantTypes"]
@@ -63,9 +73,13 @@ depends-member:
 - !private ["PSs22BidirectionalIndexType", "IntegerLiteralType"]
 - !private ["PSs21BitwiseOperationsType", "Distance"]
 - !private ["PSs21BitwiseOperationsType", "IntegerLiteralType"]
+- !private ["Sb", "deinit"]
 - !private ["PSs11CVarArgType", "Distance"]
 - !private ["PSs11CVarArgType", "IntegerLiteralType"]
+- !private ["PSs11CVarArgType", "UIAlertAction"]
+- !private ["PSs11CVarArgType", "UIAlertController"]
 - !private ["PSs11CVarArgType", "UIImage"]
+- !private ["PSs11CVarArgType", "addAction"]
 - !private ["PSs11CVarArgType", "dequeueReusableCellWithIdentifier"]
 - ["PSs11CVarArgType", "didReceiveMemoryWarning"]
 - !private ["PSs11CVarArgType", "image"]
@@ -73,6 +87,7 @@ depends-member:
 - !private ["PSs11CVarArgType", "locationLabel"]
 - !private ["PSs11CVarArgType", "nameLabel"]
 - ["PSs11CVarArgType", "numberOfSectionsInTableView"]
+- !private ["PSs11CVarArgType", "presentViewController"]
 - ["PSs11CVarArgType", "restaurantLocations"]
 - ["PSs11CVarArgType", "restaurantNames"]
 - ["PSs11CVarArgType", "restaurantTypes"]
@@ -83,6 +98,7 @@ depends-member:
 - !private ["PSs11CVarArgType", "typeLabel"]
 - ["PSs11CVarArgType", "viewDidLoad"]
 - ["PSs11CVarArgType", ""]
+- !private ["VSs9Character", "deinit"]
 - ["PSs14CollectionType", "Element"]
 - !private ["PSs14CollectionType", "Generator"]
 - !private ["PSs14CollectionType", "Index"]
@@ -92,11 +108,13 @@ depends-member:
 - !private ["PSs14CollectionType", "subscript"]
 - !private ["PSs10Comparable", "Distance"]
 - !private ["PSs10Comparable", "IntegerLiteralType"]
+- !private ["PSs10Comparable", "init"]
 - ["PSs28CustomDebugStringConvertible", "Element"]
 - !private ["PSs28CustomDebugStringConvertible", "Generator"]
 - !private ["PSs28CustomDebugStringConvertible", "Index"]
 - !private ["PSs28CustomDebugStringConvertible", "SubSequence"]
 - !private ["PSs28CustomDebugStringConvertible", "count"]
+- !private ["PSs28CustomDebugStringConvertible", "init"]
 - !private ["PSs28CustomDebugStringConvertible", "subscript"]
 - !private ["PSs23CustomStringConvertible", "Distance"]
 - ["PSs23CustomStringConvertible", "Element"]
@@ -104,7 +122,10 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "Index"]
 - !private ["PSs23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["PSs23CustomStringConvertible", "SubSequence"]
+- !private ["PSs23CustomStringConvertible", "UIAlertAction"]
+- !private ["PSs23CustomStringConvertible", "UIAlertController"]
 - !private ["PSs23CustomStringConvertible", "UIImage"]
+- !private ["PSs23CustomStringConvertible", "addAction"]
 - !private ["PSs23CustomStringConvertible", "count"]
 - !private ["PSs23CustomStringConvertible", "dequeueReusableCellWithIdentifier"]
 - ["PSs23CustomStringConvertible", "didReceiveMemoryWarning"]
@@ -113,6 +134,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "locationLabel"]
 - !private ["PSs23CustomStringConvertible", "nameLabel"]
 - ["PSs23CustomStringConvertible", "numberOfSectionsInTableView"]
+- !private ["PSs23CustomStringConvertible", "presentViewController"]
 - ["PSs23CustomStringConvertible", "restaurantLocations"]
 - ["PSs23CustomStringConvertible", "restaurantNames"]
 - ["PSs23CustomStringConvertible", "restaurantTypes"]
@@ -124,9 +146,16 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "typeLabel"]
 - ["PSs23CustomStringConvertible", "viewDidLoad"]
 - ["PSs23CustomStringConvertible", ""]
+- !private ["Sd", "deinit"]
+- !private ["PSs9Equatable", "Alert"]
+- !private ["PSs9Equatable", "Cancel"]
+- !private ["PSs9Equatable", "Default"]
 - !private ["PSs9Equatable", "Distance"]
 - !private ["PSs9Equatable", "IntegerLiteralType"]
+- !private ["PSs9Equatable", "UIAlertAction"]
+- !private ["PSs9Equatable", "UIAlertController"]
 - !private ["PSs9Equatable", "UIImage"]
+- !private ["PSs9Equatable", "addAction"]
 - !private ["PSs9Equatable", "dequeueReusableCellWithIdentifier"]
 - ["PSs9Equatable", "didReceiveMemoryWarning"]
 - !private ["PSs9Equatable", "image"]
@@ -134,6 +163,7 @@ depends-member:
 - !private ["PSs9Equatable", "locationLabel"]
 - !private ["PSs9Equatable", "nameLabel"]
 - ["PSs9Equatable", "numberOfSectionsInTableView"]
+- !private ["PSs9Equatable", "presentViewController"]
 - ["PSs9Equatable", "restaurantLocations"]
 - ["PSs9Equatable", "restaurantNames"]
 - ["PSs9Equatable", "restaurantTypes"]
@@ -144,12 +174,20 @@ depends-member:
 - !private ["PSs9Equatable", "typeLabel"]
 - ["PSs9Equatable", "viewDidLoad"]
 - ["PSs9Equatable", ""]
+- !private ["PSs41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Sf", "deinit"]
 - !private ["PSs16ForwardIndexType", "Distance"]
 - !private ["PSs16ForwardIndexType", "IntegerLiteralType"]
 - !private ["PSs13GeneratorType", "Element"]
+- !private ["PSs8Hashable", "Alert"]
+- !private ["PSs8Hashable", "Cancel"]
+- !private ["PSs8Hashable", "Default"]
 - !private ["PSs8Hashable", "Distance"]
 - !private ["PSs8Hashable", "IntegerLiteralType"]
+- !private ["PSs8Hashable", "UIAlertAction"]
+- !private ["PSs8Hashable", "UIAlertController"]
 - !private ["PSs8Hashable", "UIImage"]
+- !private ["PSs8Hashable", "addAction"]
 - !private ["PSs8Hashable", "dequeueReusableCellWithIdentifier"]
 - ["PSs8Hashable", "didReceiveMemoryWarning"]
 - !private ["PSs8Hashable", "image"]
@@ -157,6 +195,7 @@ depends-member:
 - !private ["PSs8Hashable", "locationLabel"]
 - !private ["PSs8Hashable", "nameLabel"]
 - ["PSs8Hashable", "numberOfSectionsInTableView"]
+- !private ["PSs8Hashable", "presentViewController"]
 - ["PSs8Hashable", "restaurantLocations"]
 - ["PSs8Hashable", "restaurantNames"]
 - ["PSs8Hashable", "restaurantTypes"]
@@ -177,6 +216,11 @@ depends-member:
 - !private ["VSs17IndexingGenerator", "Element"]
 - !private ["Si", "Distance"]
 - !private ["Si", "IntegerLiteralType"]
+- !private ["Si", "deinit"]
+- !private ["VSs5Int16", "deinit"]
+- !private ["VSs5Int32", "deinit"]
+- !private ["VSs5Int64", "deinit"]
+- !private ["VSs4Int8", "deinit"]
 - !private ["PSs21IntegerArithmeticType", "Distance"]
 - !private ["PSs21IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["PSs25IntegerLiteralConvertible", "Distance"]
@@ -185,6 +229,7 @@ depends-member:
 - !private ["PSs11IntegerType", "IntegerLiteralType"]
 - !private ["PSs14MirrorPathType", "Distance"]
 - !private ["PSs14MirrorPathType", "IntegerLiteralType"]
+- !private ["PSs14MirrorPathType", "init"]
 - ["PSs21MutableCollectionType", "Element"]
 - !private ["PSs21MutableCollectionType", "Generator"]
 - !private ["PSs21MutableCollectionType", "Index"]
@@ -203,7 +248,10 @@ depends-member:
 - !private ["PSs16MutableSliceable", "SubSequence"]
 - !private ["PSs16MutableSliceable", "count"]
 - !private ["PSs16MutableSliceable", "subscript"]
+- !private ["PSo8NSCoding", "UIAlertAction"]
+- !private ["PSo8NSCoding", "UIAlertController"]
 - !private ["PSo8NSCoding", "UIImage"]
+- !private ["PSo8NSCoding", "addAction"]
 - !private ["PSo8NSCoding", "dequeueReusableCellWithIdentifier"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - !private ["PSo8NSCoding", "image"]
@@ -211,6 +259,7 @@ depends-member:
 - !private ["PSo8NSCoding", "locationLabel"]
 - !private ["PSo8NSCoding", "nameLabel"]
 - ["PSo8NSCoding", "numberOfSectionsInTableView"]
+- !private ["PSo8NSCoding", "presentViewController"]
 - ["PSo8NSCoding", "restaurantLocations"]
 - ["PSo8NSCoding", "restaurantNames"]
 - ["PSo8NSCoding", "restaurantTypes"]
@@ -221,11 +270,16 @@ depends-member:
 - !private ["PSo8NSCoding", "typeLabel"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "init"]
 - !private ["PSo9NSCopying", "row"]
+- !private ["PSo26NSExtensionRequestHandling", "UIAlertAction"]
+- !private ["PSo26NSExtensionRequestHandling", "UIAlertController"]
 - !private ["PSo26NSExtensionRequestHandling", "UIImage"]
+- !private ["PSo26NSExtensionRequestHandling", "addAction"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "numberOfSectionsInTableView"]
+- !private ["PSo26NSExtensionRequestHandling", "presentViewController"]
 - ["PSo26NSExtensionRequestHandling", "restaurantLocations"]
 - ["PSo26NSExtensionRequestHandling", "restaurantNames"]
 - ["PSo26NSExtensionRequestHandling", "restaurantTypes"]
@@ -233,12 +287,17 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
 - !private ["CSo11NSIndexPath", "row"]
+- !private ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "Int"]
 - ["CSo8NSObject", "NSIndexPath"]
 - !private ["CSo8NSObject", "RestaurantTableViewCell"]
+- !private ["CSo8NSObject", "UIAlertAction"]
+- !private ["CSo8NSObject", "UIAlertController"]
 - !private ["CSo8NSObject", "UIImage"]
 - ["CSo8NSObject", "UITableView"]
 - ["CSo8NSObject", "UITableViewCell"]
+- !private ["CSo8NSObject", "Void"]
+- !private ["CSo8NSObject", "addAction"]
 - !private ["CSo8NSObject", "dequeueReusableCellWithIdentifier"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - !private ["CSo8NSObject", "image"]
@@ -246,6 +305,7 @@ depends-member:
 - !private ["CSo8NSObject", "locationLabel"]
 - !private ["CSo8NSObject", "nameLabel"]
 - ["CSo8NSObject", "numberOfSectionsInTableView"]
+- !private ["CSo8NSObject", "presentViewController"]
 - ["CSo8NSObject", "restaurantLocations"]
 - ["CSo8NSObject", "restaurantNames"]
 - ["CSo8NSObject", "restaurantTypes"]
@@ -255,7 +315,10 @@ depends-member:
 - !private ["CSo8NSObject", "thumbnailImageView"]
 - !private ["CSo8NSObject", "typeLabel"]
 - ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "UIAlertAction"]
+- !private ["PSo16NSObjectProtocol", "UIAlertController"]
 - !private ["PSo16NSObjectProtocol", "UIImage"]
+- !private ["PSo16NSObjectProtocol", "addAction"]
 - !private ["PSo16NSObjectProtocol", "dequeueReusableCellWithIdentifier"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - !private ["PSo16NSObjectProtocol", "image"]
@@ -263,6 +326,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "locationLabel"]
 - !private ["PSo16NSObjectProtocol", "nameLabel"]
 - ["PSo16NSObjectProtocol", "numberOfSectionsInTableView"]
+- !private ["PSo16NSObjectProtocol", "presentViewController"]
 - ["PSo16NSObjectProtocol", "restaurantLocations"]
 - ["PSo16NSObjectProtocol", "restaurantNames"]
 - ["PSo16NSObjectProtocol", "restaurantTypes"]
@@ -275,6 +339,9 @@ depends-member:
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["PSo14NSSecureCoding", "row"]
+- !private ["CSo8NSString", "init"]
+- !private ["Sq", "deinit"]
+- !private ["PSs16OutputStreamType", "init"]
 - !private ["PSs21RandomAccessIndexType", "Distance"]
 - !private ["PSs21RandomAccessIndexType", "IntegerLiteralType"]
 - ["PSs30RangeReplaceableCollectionType", "Element"]
@@ -283,6 +350,9 @@ depends-member:
 - !private ["PSs30RangeReplaceableCollectionType", "SubSequence"]
 - !private ["PSs30RangeReplaceableCollectionType", "count"]
 - !private ["PSs30RangeReplaceableCollectionType", "subscript"]
+- !private ["PSs16RawRepresentable", "Alert"]
+- !private ["PSs16RawRepresentable", "Cancel"]
+- !private ["PSs16RawRepresentable", "Default"]
 - !private ["C7FoodPin23RestaurantTableViewCell", "locationLabel"]
 - !private ["C7FoodPin23RestaurantTableViewCell", "nameLabel"]
 - !private ["C7FoodPin23RestaurantTableViewCell", "thumbnailImageView"]
@@ -290,13 +360,17 @@ depends-member:
 - ["C7FoodPin29RestaurantTableViewController", "Int"]
 - ["C7FoodPin29RestaurantTableViewController", "NSIndexPath"]
 - !private ["C7FoodPin29RestaurantTableViewController", "RestaurantTableViewCell"]
+- !private ["C7FoodPin29RestaurantTableViewController", "UIAlertAction"]
+- !private ["C7FoodPin29RestaurantTableViewController", "UIAlertController"]
 - !private ["C7FoodPin29RestaurantTableViewController", "UIImage"]
 - ["C7FoodPin29RestaurantTableViewController", "UITableView"]
 - ["C7FoodPin29RestaurantTableViewController", "UITableViewCell"]
+- !private ["C7FoodPin29RestaurantTableViewController", "Void"]
 - ["C7FoodPin29RestaurantTableViewController", "deinit"]
 - ["C7FoodPin29RestaurantTableViewController", "didReceiveMemoryWarning"]
 - ["C7FoodPin29RestaurantTableViewController", "init"]
 - ["C7FoodPin29RestaurantTableViewController", "numberOfSectionsInTableView"]
+- !private ["C7FoodPin29RestaurantTableViewController", "presentViewController"]
 - ["C7FoodPin29RestaurantTableViewController", "restaurantLocations"]
 - ["C7FoodPin29RestaurantTableViewController", "restaurantNames"]
 - ["C7FoodPin29RestaurantTableViewController", "restaurantTypes"]
@@ -317,8 +391,12 @@ depends-member:
 - !private ["VSs5Slice", "Index"]
 - !private ["VSs5Slice", "SubSequence"]
 - !private ["VSs5Slice", "_Element"]
+- !private ["PSs10Streamable", "init"]
 - !private ["PSs10Strideable", "Distance"]
 - !private ["PSs10Strideable", "IntegerLiteralType"]
+- !private ["SS", "init"]
+- !private ["PSs30StringInterpolationConvertible", "init"]
+- !private ["PSs24StringLiteralConvertible", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo29UIAccessibilityIdentification", "image"]
 - !private ["PSo29UIAccessibilityIdentification", "init"]
@@ -327,6 +405,12 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "text"]
 - !private ["PSo29UIAccessibilityIdentification", "thumbnailImageView"]
 - !private ["PSo29UIAccessibilityIdentification", "typeLabel"]
+- !private ["CSo13UIAlertAction", "init"]
+- !private ["OSC18UIAlertActionStyle", "Cancel"]
+- !private ["OSC18UIAlertActionStyle", "Default"]
+- !private ["CSo17UIAlertController", "addAction"]
+- !private ["CSo17UIAlertController", "init"]
+- !private ["OSC22UIAlertControllerStyle", "Alert"]
 - !private ["PSo12UIAppearance", "dequeueReusableCellWithIdentifier"]
 - !private ["PSo12UIAppearance", "image"]
 - !private ["PSo12UIAppearance", "locationLabel"]
@@ -334,7 +418,10 @@ depends-member:
 - !private ["PSo12UIAppearance", "text"]
 - !private ["PSo12UIAppearance", "thumbnailImageView"]
 - !private ["PSo12UIAppearance", "typeLabel"]
+- !private ["PSo21UIAppearanceContainer", "UIAlertAction"]
+- !private ["PSo21UIAppearanceContainer", "UIAlertController"]
 - !private ["PSo21UIAppearanceContainer", "UIImage"]
+- !private ["PSo21UIAppearanceContainer", "addAction"]
 - !private ["PSo21UIAppearanceContainer", "dequeueReusableCellWithIdentifier"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - !private ["PSo21UIAppearanceContainer", "image"]
@@ -342,6 +429,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "locationLabel"]
 - !private ["PSo21UIAppearanceContainer", "nameLabel"]
 - ["PSo21UIAppearanceContainer", "numberOfSectionsInTableView"]
+- !private ["PSo21UIAppearanceContainer", "presentViewController"]
 - ["PSo21UIAppearanceContainer", "restaurantLocations"]
 - ["PSo21UIAppearanceContainer", "restaurantNames"]
 - ["PSo21UIAppearanceContainer", "restaurantTypes"]
@@ -351,10 +439,14 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "typeLabel"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "UIAlertAction"]
+- !private ["PSo18UIContentContainer", "UIAlertController"]
 - !private ["PSo18UIContentContainer", "UIImage"]
+- !private ["PSo18UIContentContainer", "addAction"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "numberOfSectionsInTableView"]
+- !private ["PSo18UIContentContainer", "presentViewController"]
 - ["PSo18UIContentContainer", "restaurantLocations"]
 - ["PSo18UIContentContainer", "restaurantNames"]
 - ["PSo18UIContentContainer", "restaurantTypes"]
@@ -375,7 +467,10 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "text"]
 - !private ["PSo13UIDynamicItem", "thumbnailImageView"]
 - !private ["PSo13UIDynamicItem", "typeLabel"]
+- !private ["PSo18UIFocusEnvironment", "UIAlertAction"]
+- !private ["PSo18UIFocusEnvironment", "UIAlertController"]
 - !private ["PSo18UIFocusEnvironment", "UIImage"]
+- !private ["PSo18UIFocusEnvironment", "addAction"]
 - !private ["PSo18UIFocusEnvironment", "dequeueReusableCellWithIdentifier"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UIFocusEnvironment", "image"]
@@ -383,6 +478,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "locationLabel"]
 - !private ["PSo18UIFocusEnvironment", "nameLabel"]
 - ["PSo18UIFocusEnvironment", "numberOfSectionsInTableView"]
+- !private ["PSo18UIFocusEnvironment", "presentViewController"]
 - ["PSo18UIFocusEnvironment", "restaurantLocations"]
 - ["PSo18UIFocusEnvironment", "restaurantNames"]
 - ["PSo18UIFocusEnvironment", "restaurantTypes"]
@@ -402,9 +498,13 @@ depends-member:
 - ["CSo11UIResponder", "Int"]
 - ["CSo11UIResponder", "NSIndexPath"]
 - !private ["CSo11UIResponder", "RestaurantTableViewCell"]
+- !private ["CSo11UIResponder", "UIAlertAction"]
+- !private ["CSo11UIResponder", "UIAlertController"]
 - !private ["CSo11UIResponder", "UIImage"]
 - ["CSo11UIResponder", "UITableView"]
 - ["CSo11UIResponder", "UITableViewCell"]
+- !private ["CSo11UIResponder", "Void"]
+- !private ["CSo11UIResponder", "addAction"]
 - !private ["CSo11UIResponder", "dequeueReusableCellWithIdentifier"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - !private ["CSo11UIResponder", "image"]
@@ -412,6 +512,7 @@ depends-member:
 - !private ["CSo11UIResponder", "locationLabel"]
 - !private ["CSo11UIResponder", "nameLabel"]
 - ["CSo11UIResponder", "numberOfSectionsInTableView"]
+- !private ["CSo11UIResponder", "presentViewController"]
 - ["CSo11UIResponder", "restaurantLocations"]
 - ["CSo11UIResponder", "restaurantNames"]
 - ["CSo11UIResponder", "restaurantTypes"]
@@ -421,20 +522,27 @@ depends-member:
 - !private ["CSo11UIResponder", "typeLabel"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - !private ["CSo12UIScrollView", "dequeueReusableCellWithIdentifier"]
+- !private ["PSo20UIScrollViewDelegate", "UIAlertAction"]
+- !private ["PSo20UIScrollViewDelegate", "UIAlertController"]
 - !private ["PSo20UIScrollViewDelegate", "UIImage"]
 - ["PSo20UIScrollViewDelegate", "didReceiveMemoryWarning"]
 - ["PSo20UIScrollViewDelegate", "init"]
 - ["PSo20UIScrollViewDelegate", "numberOfSectionsInTableView"]
+- !private ["PSo20UIScrollViewDelegate", "presentViewController"]
 - ["PSo20UIScrollViewDelegate", "restaurantLocations"]
 - ["PSo20UIScrollViewDelegate", "restaurantNames"]
 - ["PSo20UIScrollViewDelegate", "restaurantTypes"]
 - ["PSo20UIScrollViewDelegate", "tableView"]
 - ["PSo20UIScrollViewDelegate", "viewDidLoad"]
 - ["PSo20UIScrollViewDelegate", ""]
+- !private ["PSo16UIStateRestoring", "UIAlertAction"]
+- !private ["PSo16UIStateRestoring", "UIAlertController"]
 - !private ["PSo16UIStateRestoring", "UIImage"]
+- !private ["PSo16UIStateRestoring", "addAction"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "numberOfSectionsInTableView"]
+- !private ["PSo16UIStateRestoring", "presentViewController"]
 - ["PSo16UIStateRestoring", "restaurantLocations"]
 - ["PSo16UIStateRestoring", "restaurantNames"]
 - ["PSo16UIStateRestoring", "restaurantTypes"]
@@ -450,39 +558,52 @@ depends-member:
 - ["CSo21UITableViewController", "Int"]
 - ["CSo21UITableViewController", "NSIndexPath"]
 - !private ["CSo21UITableViewController", "RestaurantTableViewCell"]
+- !private ["CSo21UITableViewController", "UIAlertAction"]
+- !private ["CSo21UITableViewController", "UIAlertController"]
 - !private ["CSo21UITableViewController", "UIImage"]
 - ["CSo21UITableViewController", "UITableView"]
 - ["CSo21UITableViewController", "UITableViewCell"]
+- !private ["CSo21UITableViewController", "Void"]
 - ["CSo21UITableViewController", "didReceiveMemoryWarning"]
 - ["CSo21UITableViewController", "init"]
 - ["CSo21UITableViewController", "numberOfSectionsInTableView"]
+- !private ["CSo21UITableViewController", "presentViewController"]
 - ["CSo21UITableViewController", "restaurantLocations"]
 - ["CSo21UITableViewController", "restaurantNames"]
 - ["CSo21UITableViewController", "restaurantTypes"]
 - ["CSo21UITableViewController", "tableView"]
 - ["CSo21UITableViewController", "viewDidLoad"]
 - ["CSo21UITableViewController", ""]
+- !private ["PSo21UITableViewDataSource", "UIAlertAction"]
+- !private ["PSo21UITableViewDataSource", "UIAlertController"]
 - !private ["PSo21UITableViewDataSource", "UIImage"]
 - ["PSo21UITableViewDataSource", "didReceiveMemoryWarning"]
 - ["PSo21UITableViewDataSource", "init"]
 - ["PSo21UITableViewDataSource", "numberOfSectionsInTableView"]
+- !private ["PSo21UITableViewDataSource", "presentViewController"]
 - ["PSo21UITableViewDataSource", "restaurantLocations"]
 - ["PSo21UITableViewDataSource", "restaurantNames"]
 - ["PSo21UITableViewDataSource", "restaurantTypes"]
 - ["PSo21UITableViewDataSource", "tableView"]
 - ["PSo21UITableViewDataSource", "viewDidLoad"]
 - ["PSo21UITableViewDataSource", ""]
+- !private ["PSo19UITableViewDelegate", "UIAlertAction"]
+- !private ["PSo19UITableViewDelegate", "UIAlertController"]
 - !private ["PSo19UITableViewDelegate", "UIImage"]
 - ["PSo19UITableViewDelegate", "didReceiveMemoryWarning"]
 - ["PSo19UITableViewDelegate", "init"]
 - ["PSo19UITableViewDelegate", "numberOfSectionsInTableView"]
+- !private ["PSo19UITableViewDelegate", "presentViewController"]
 - ["PSo19UITableViewDelegate", "restaurantLocations"]
 - ["PSo19UITableViewDelegate", "restaurantNames"]
 - ["PSo19UITableViewDelegate", "restaurantTypes"]
 - ["PSo19UITableViewDelegate", "tableView"]
 - ["PSo19UITableViewDelegate", "viewDidLoad"]
 - ["PSo19UITableViewDelegate", ""]
+- !private ["PSo18UITraitEnvironment", "UIAlertAction"]
+- !private ["PSo18UITraitEnvironment", "UIAlertController"]
 - !private ["PSo18UITraitEnvironment", "UIImage"]
+- !private ["PSo18UITraitEnvironment", "addAction"]
 - !private ["PSo18UITraitEnvironment", "dequeueReusableCellWithIdentifier"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UITraitEnvironment", "image"]
@@ -490,6 +611,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "locationLabel"]
 - !private ["PSo18UITraitEnvironment", "nameLabel"]
 - ["PSo18UITraitEnvironment", "numberOfSectionsInTableView"]
+- !private ["PSo18UITraitEnvironment", "presentViewController"]
 - ["PSo18UITraitEnvironment", "restaurantLocations"]
 - ["PSo18UITraitEnvironment", "restaurantNames"]
 - ["PSo18UITraitEnvironment", "restaurantTypes"]
@@ -509,25 +631,42 @@ depends-member:
 - ["CSo16UIViewController", "Int"]
 - ["CSo16UIViewController", "NSIndexPath"]
 - !private ["CSo16UIViewController", "RestaurantTableViewCell"]
+- !private ["CSo16UIViewController", "UIAlertAction"]
+- !private ["CSo16UIViewController", "UIAlertController"]
 - !private ["CSo16UIViewController", "UIImage"]
 - ["CSo16UIViewController", "UITableView"]
 - ["CSo16UIViewController", "UITableViewCell"]
+- !private ["CSo16UIViewController", "Void"]
+- !private ["CSo16UIViewController", "addAction"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "numberOfSectionsInTableView"]
+- !private ["CSo16UIViewController", "presentViewController"]
 - ["CSo16UIViewController", "restaurantLocations"]
 - ["CSo16UIViewController", "restaurantNames"]
 - ["CSo16UIViewController", "restaurantTypes"]
 - ["CSo16UIViewController", "tableView"]
 - ["CSo16UIViewController", "viewDidLoad"]
+- !private ["Su", "deinit"]
+- !private ["VSs6UInt16", "deinit"]
+- !private ["VSs6UInt32", "deinit"]
+- !private ["VSs6UInt64", "deinit"]
+- !private ["VSs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["PSs31UnicodeScalarLiteralConvertible", "init"]
 - ["PSs10_ArrayType", "Element"]
 - !private ["PSs10_ArrayType", "Generator"]
 - !private ["PSs10_ArrayType", "Index"]
 - !private ["PSs10_ArrayType", "SubSequence"]
 - !private ["PSs10_ArrayType", "count"]
 - !private ["PSs10_ArrayType", "subscript"]
+- !private ["PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["PSs33_BuiltinIntegerLiteralConvertible", "Distance"]
 - !private ["PSs33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
+- !private ["PSs32_BuiltinStringLiteralConvertible", "init"]
+- !private ["PSs37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["PSs39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["PSs16_CocoaStringType", "init"]
 - ["PSs24_DestructorSafeContainer", "Element"]
 - !private ["PSs24_DestructorSafeContainer", "Generator"]
 - !private ["PSs24_DestructorSafeContainer", "Index"]
@@ -548,6 +687,7 @@ depends-member:
 - !private ["PSs21_ObjectiveCBridgeable", "IntegerLiteralType"]
 - !private ["PSs21_ObjectiveCBridgeable", "SubSequence"]
 - !private ["PSs21_ObjectiveCBridgeable", "count"]
+- !private ["PSs21_ObjectiveCBridgeable", "init"]
 - !private ["PSs21_ObjectiveCBridgeable", "subscript"]
 - !private ["PSs22_RandomAccessAmbiguity", "Distance"]
 - !private ["PSs22_RandomAccessAmbiguity", "IntegerLiteralType"]
@@ -560,6 +700,7 @@ depends-member:
 - !private ["PSs12_Reflectable", "count"]
 - !private ["PSs12_Reflectable", "dequeueReusableCellWithIdentifier"]
 - !private ["PSs12_Reflectable", "image"]
+- !private ["PSs12_Reflectable", "init"]
 - !private ["PSs12_Reflectable", "locationLabel"]
 - !private ["PSs12_Reflectable", "nameLabel"]
 - !private ["PSs12_Reflectable", "subscript"]
@@ -577,18 +718,27 @@ depends-nominal:
 - !private "VSs10ArraySlice"
 - !private "PSs22BidirectionalIndexType"
 - !private "PSs21BitwiseOperationsType"
+- !private "Sb"
 - "PSs11CVarArgType"
+- !private "VSs9Character"
 - "PSs14CollectionType"
 - !private "PSs10Comparable"
 - "PSs28CustomDebugStringConvertible"
 - "PSs23CustomStringConvertible"
+- !private "Sd"
 - "PSs9Equatable"
+- !private "PSs41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Sf"
 - !private "PSs16ForwardIndexType"
 - !private "PSs13GeneratorType"
 - "PSs8Hashable"
 - "PSs9Indexable"
 - !private "VSs17IndexingGenerator"
 - !private "Si"
+- !private "VSs5Int16"
+- !private "VSs5Int32"
+- !private "VSs5Int64"
+- !private "VSs4Int8"
 - !private "PSs21IntegerArithmeticType"
 - !private "PSs25IntegerLiteralConvertible"
 - !private "PSs11IntegerType"
@@ -600,19 +750,32 @@ depends-nominal:
 - !private "PSo9NSCopying"
 - "PSo26NSExtensionRequestHandling"
 - !private "CSo11NSIndexPath"
+- !private "PSo16NSMutableCopying"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
 - !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "Sq"
+- !private "PSs16OutputStreamType"
 - !private "PSs21RandomAccessIndexType"
 - "PSs30RangeReplaceableCollectionType"
+- !private "PSs16RawRepresentable"
 - !private "C7FoodPin23RestaurantTableViewCell"
 - "C7FoodPin29RestaurantTableViewController"
 - "PSs12SequenceType"
 - !private "PSs17SignedIntegerType"
 - !private "PSs16SignedNumberType"
 - !private "VSs5Slice"
+- !private "PSs10Streamable"
 - !private "PSs10Strideable"
+- !private "SS"
+- !private "PSs30StringInterpolationConvertible"
+- !private "PSs24StringLiteralConvertible"
 - !private "PSo29UIAccessibilityIdentification"
+- !private "CSo13UIAlertAction"
+- !private "OSC18UIAlertActionStyle"
+- !private "CSo17UIAlertController"
+- !private "OSC22UIAlertControllerStyle"
 - !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
 - "PSo18UIContentContainer"
@@ -635,8 +798,20 @@ depends-nominal:
 - "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
+- !private "Su"
+- !private "VSs6UInt16"
+- !private "VSs6UInt32"
+- !private "VSs6UInt64"
+- !private "VSs5UInt8"
+- !private "Sc"
+- !private "PSs31UnicodeScalarLiteralConvertible"
 - "PSs10_ArrayType"
+- !private "PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible"
 - !private "PSs33_BuiltinIntegerLiteralConvertible"
+- !private "PSs32_BuiltinStringLiteralConvertible"
+- !private "PSs37_BuiltinUTF16StringLiteralConvertible"
+- !private "PSs39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "PSs16_CocoaStringType"
 - "PSs24_DestructorSafeContainer"
 - !private "PSs24_ImageLiteralConvertible"
 - !private "PSs14_Incrementable"
@@ -657,4 +832,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "1423ac073cbd25c32774b7160b19ae1d"
+interface-hash: "9663cea00b2262ffac4c1050de69d968"
