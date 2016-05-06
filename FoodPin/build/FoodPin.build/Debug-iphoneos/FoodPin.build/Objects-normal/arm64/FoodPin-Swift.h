@@ -107,11 +107,19 @@ SWIFT_CLASS("_TtC7FoodPin11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSCoder;
+
+SWIFT_CLASS("_TtC7FoodPin23RestaurantTableViewCell")
+@interface RestaurantTableViewCell : UITableViewCell
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UITableView;
 @class NSIndexPath;
-@class UITableViewCell;
 @class NSBundle;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC7FoodPin29RestaurantTableViewController")
 @interface RestaurantTableViewController : UITableViewController

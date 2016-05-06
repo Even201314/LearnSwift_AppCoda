@@ -107,15 +107,31 @@ SWIFT_CLASS("_TtC7FoodPin11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UILabel;
+@class UIImageView;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC7FoodPin23RestaurantTableViewCell")
+@interface RestaurantTableViewCell : UITableViewCell
+@property (nonatomic, strong) IBOutlet UILabel * __null_unspecified nameLabel;
+@property (nonatomic, strong) IBOutlet UILabel * __null_unspecified locationLabel;
+@property (nonatomic, strong) IBOutlet UILabel * __null_unspecified typeLabel;
+@property (nonatomic, strong) IBOutlet UIImageView * __null_unspecified thumbnailImageView;
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UITableView;
 @class NSIndexPath;
-@class UITableViewCell;
 @class NSBundle;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC7FoodPin29RestaurantTableViewController")
 @interface RestaurantTableViewController : UITableViewController
 @property (nonatomic, copy) NSArray<NSString *> * __nonnull restaurantNames;
+@property (nonatomic, copy) NSArray<NSString *> * __nonnull restaurantLocations;
+@property (nonatomic, copy) NSArray<NSString *> * __nonnull restaurantTypes;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * __nonnull)tableView;

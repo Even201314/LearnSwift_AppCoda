@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C7FoodPin11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationDidEnterBackground"
+- "applicationWillEnterForeground"
+- "window"
 - "application"
 - "applicationDidBecomeActive"
-- "window"
-- "applicationWillEnterForeground"
 - "applicationWillTerminate"
+- "applicationDidEnterBackground"
 - "applicationWillResignActive"
 depends-top-level:
-- "NSObject"
-- "AnyObject"
-- "Bool"
-- "UIApplicationDelegate"
 - "UIResponder"
-- !private "BooleanLiteralType"
-- "UIWindow"
+- "UIApplicationDelegate"
 - "UIApplication"
+- !private "BooleanLiteralType"
+- "AnyObject"
+- "UIWindow"
 - "AppDelegate"
+- "Bool"
+- "NSObject"
 depends-member:
 - ["PSs9AnyObject", "application"]
 - ["PSs9AnyObject", "applicationDidBecomeActive"]

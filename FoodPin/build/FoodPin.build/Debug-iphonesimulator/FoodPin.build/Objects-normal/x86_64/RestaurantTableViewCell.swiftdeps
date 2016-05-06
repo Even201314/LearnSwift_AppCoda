@@ -1,0 +1,234 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "RestaurantTableViewCell"
+provides-nominal:
+- "C7FoodPin23RestaurantTableViewCell"
+provides-member:
+- ["C7FoodPin23RestaurantTableViewCell", ""]
+provides-dynamic-lookup:
+- "locationLabel"
+- "awakeFromNib"
+- "nameLabel"
+- "setSelected"
+- "thumbnailImageView"
+- "typeLabel"
+depends-top-level:
+- "Bool"
+- "UILabel"
+- "RestaurantTableViewCell"
+- "UIImageView"
+- "UITableViewCell"
+depends-member:
+- ["PSs9AnyObject", "awakeFromNib"]
+- ["PSs9AnyObject", "init"]
+- ["PSs9AnyObject", "locationLabel"]
+- ["PSs9AnyObject", "nameLabel"]
+- ["PSs9AnyObject", "setSelected"]
+- ["PSs9AnyObject", "thumbnailImageView"]
+- ["PSs9AnyObject", "typeLabel"]
+- ["PSs9AnyObject", ""]
+- ["PSs11CVarArgType", "awakeFromNib"]
+- ["PSs11CVarArgType", "init"]
+- ["PSs11CVarArgType", "locationLabel"]
+- ["PSs11CVarArgType", "nameLabel"]
+- ["PSs11CVarArgType", "setSelected"]
+- ["PSs11CVarArgType", "thumbnailImageView"]
+- ["PSs11CVarArgType", "typeLabel"]
+- ["PSs11CVarArgType", ""]
+- ["PSs23CustomStringConvertible", "awakeFromNib"]
+- ["PSs23CustomStringConvertible", "init"]
+- ["PSs23CustomStringConvertible", "locationLabel"]
+- ["PSs23CustomStringConvertible", "nameLabel"]
+- ["PSs23CustomStringConvertible", "setSelected"]
+- ["PSs23CustomStringConvertible", "thumbnailImageView"]
+- ["PSs23CustomStringConvertible", "typeLabel"]
+- ["PSs23CustomStringConvertible", ""]
+- ["PSs9Equatable", "awakeFromNib"]
+- ["PSs9Equatable", "init"]
+- ["PSs9Equatable", "locationLabel"]
+- ["PSs9Equatable", "nameLabel"]
+- ["PSs9Equatable", "setSelected"]
+- ["PSs9Equatable", "thumbnailImageView"]
+- ["PSs9Equatable", "typeLabel"]
+- ["PSs9Equatable", ""]
+- ["PSs8Hashable", "awakeFromNib"]
+- ["PSs8Hashable", "init"]
+- ["PSs8Hashable", "locationLabel"]
+- ["PSs8Hashable", "nameLabel"]
+- ["PSs8Hashable", "setSelected"]
+- ["PSs8Hashable", "thumbnailImageView"]
+- ["PSs8Hashable", "typeLabel"]
+- ["PSs8Hashable", ""]
+- ["PSo8NSCoding", "awakeFromNib"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "locationLabel"]
+- ["PSo8NSCoding", "nameLabel"]
+- ["PSo8NSCoding", "setSelected"]
+- ["PSo8NSCoding", "thumbnailImageView"]
+- ["PSo8NSCoding", "typeLabel"]
+- ["PSo8NSCoding", ""]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "UIImageView"]
+- ["CSo8NSObject", "UILabel"]
+- ["CSo8NSObject", "awakeFromNib"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "locationLabel"]
+- ["CSo8NSObject", "nameLabel"]
+- ["CSo8NSObject", "setSelected"]
+- ["CSo8NSObject", "thumbnailImageView"]
+- ["CSo8NSObject", "typeLabel"]
+- ["PSo16NSObjectProtocol", "awakeFromNib"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "locationLabel"]
+- ["PSo16NSObjectProtocol", "nameLabel"]
+- ["PSo16NSObjectProtocol", "setSelected"]
+- ["PSo16NSObjectProtocol", "thumbnailImageView"]
+- ["PSo16NSObjectProtocol", "typeLabel"]
+- ["PSo16NSObjectProtocol", ""]
+- ["C7FoodPin23RestaurantTableViewCell", "Bool"]
+- ["C7FoodPin23RestaurantTableViewCell", "UIImageView"]
+- ["C7FoodPin23RestaurantTableViewCell", "UILabel"]
+- ["C7FoodPin23RestaurantTableViewCell", "awakeFromNib"]
+- ["C7FoodPin23RestaurantTableViewCell", "deinit"]
+- ["C7FoodPin23RestaurantTableViewCell", "init"]
+- ["C7FoodPin23RestaurantTableViewCell", "locationLabel"]
+- ["C7FoodPin23RestaurantTableViewCell", "nameLabel"]
+- ["C7FoodPin23RestaurantTableViewCell", "setSelected"]
+- ["C7FoodPin23RestaurantTableViewCell", "thumbnailImageView"]
+- ["C7FoodPin23RestaurantTableViewCell", "typeLabel"]
+- ["PSo29UIAccessibilityIdentification", "awakeFromNib"]
+- ["PSo29UIAccessibilityIdentification", "init"]
+- ["PSo29UIAccessibilityIdentification", "locationLabel"]
+- ["PSo29UIAccessibilityIdentification", "nameLabel"]
+- ["PSo29UIAccessibilityIdentification", "setSelected"]
+- ["PSo29UIAccessibilityIdentification", "thumbnailImageView"]
+- ["PSo29UIAccessibilityIdentification", "typeLabel"]
+- ["PSo29UIAccessibilityIdentification", ""]
+- ["PSo12UIAppearance", "awakeFromNib"]
+- ["PSo12UIAppearance", "init"]
+- ["PSo12UIAppearance", "locationLabel"]
+- ["PSo12UIAppearance", "nameLabel"]
+- ["PSo12UIAppearance", "setSelected"]
+- ["PSo12UIAppearance", "thumbnailImageView"]
+- ["PSo12UIAppearance", "typeLabel"]
+- ["PSo12UIAppearance", ""]
+- ["PSo21UIAppearanceContainer", "awakeFromNib"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "locationLabel"]
+- ["PSo21UIAppearanceContainer", "nameLabel"]
+- ["PSo21UIAppearanceContainer", "setSelected"]
+- ["PSo21UIAppearanceContainer", "thumbnailImageView"]
+- ["PSo21UIAppearanceContainer", "typeLabel"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["PSo17UICoordinateSpace", "awakeFromNib"]
+- ["PSo17UICoordinateSpace", "init"]
+- ["PSo17UICoordinateSpace", "locationLabel"]
+- ["PSo17UICoordinateSpace", "nameLabel"]
+- ["PSo17UICoordinateSpace", "setSelected"]
+- ["PSo17UICoordinateSpace", "thumbnailImageView"]
+- ["PSo17UICoordinateSpace", "typeLabel"]
+- ["PSo17UICoordinateSpace", ""]
+- ["PSo13UIDynamicItem", "awakeFromNib"]
+- ["PSo13UIDynamicItem", "init"]
+- ["PSo13UIDynamicItem", "locationLabel"]
+- ["PSo13UIDynamicItem", "nameLabel"]
+- ["PSo13UIDynamicItem", "setSelected"]
+- ["PSo13UIDynamicItem", "thumbnailImageView"]
+- ["PSo13UIDynamicItem", "typeLabel"]
+- ["PSo13UIDynamicItem", ""]
+- ["PSo18UIFocusEnvironment", "awakeFromNib"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "locationLabel"]
+- ["PSo18UIFocusEnvironment", "nameLabel"]
+- ["PSo18UIFocusEnvironment", "setSelected"]
+- ["PSo18UIFocusEnvironment", "thumbnailImageView"]
+- ["PSo18UIFocusEnvironment", "typeLabel"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["PSo27UIGestureRecognizerDelegate", "awakeFromNib"]
+- ["PSo27UIGestureRecognizerDelegate", "init"]
+- ["PSo27UIGestureRecognizerDelegate", "locationLabel"]
+- ["PSo27UIGestureRecognizerDelegate", "nameLabel"]
+- ["PSo27UIGestureRecognizerDelegate", "setSelected"]
+- ["PSo27UIGestureRecognizerDelegate", "thumbnailImageView"]
+- ["PSo27UIGestureRecognizerDelegate", "typeLabel"]
+- ["PSo27UIGestureRecognizerDelegate", ""]
+- ["CSo11UIResponder", "Bool"]
+- ["CSo11UIResponder", "UIImageView"]
+- ["CSo11UIResponder", "UILabel"]
+- ["CSo11UIResponder", "awakeFromNib"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "locationLabel"]
+- ["CSo11UIResponder", "nameLabel"]
+- ["CSo11UIResponder", "setSelected"]
+- ["CSo11UIResponder", "thumbnailImageView"]
+- ["CSo11UIResponder", "typeLabel"]
+- ["CSo15UITableViewCell", "Bool"]
+- ["CSo15UITableViewCell", "UIImageView"]
+- ["CSo15UITableViewCell", "UILabel"]
+- ["CSo15UITableViewCell", "awakeFromNib"]
+- ["CSo15UITableViewCell", "init"]
+- ["CSo15UITableViewCell", "locationLabel"]
+- ["CSo15UITableViewCell", "nameLabel"]
+- ["CSo15UITableViewCell", "setSelected"]
+- ["CSo15UITableViewCell", "thumbnailImageView"]
+- ["CSo15UITableViewCell", "typeLabel"]
+- ["CSo15UITableViewCell", ""]
+- ["PSo18UITraitEnvironment", "awakeFromNib"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "locationLabel"]
+- ["PSo18UITraitEnvironment", "nameLabel"]
+- ["PSo18UITraitEnvironment", "setSelected"]
+- ["PSo18UITraitEnvironment", "thumbnailImageView"]
+- ["PSo18UITraitEnvironment", "typeLabel"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo6UIView", "Bool"]
+- ["CSo6UIView", "UIImageView"]
+- ["CSo6UIView", "UILabel"]
+- ["CSo6UIView", "awakeFromNib"]
+- ["CSo6UIView", "init"]
+- ["CSo6UIView", "locationLabel"]
+- ["CSo6UIView", "nameLabel"]
+- ["CSo6UIView", "setSelected"]
+- ["CSo6UIView", "thumbnailImageView"]
+- ["CSo6UIView", "typeLabel"]
+- ["PSs12_Reflectable", "awakeFromNib"]
+- ["PSs12_Reflectable", "init"]
+- ["PSs12_Reflectable", "locationLabel"]
+- ["PSs12_Reflectable", "nameLabel"]
+- ["PSs12_Reflectable", "setSelected"]
+- ["PSs12_Reflectable", "thumbnailImageView"]
+- ["PSs12_Reflectable", "typeLabel"]
+- ["PSs12_Reflectable", ""]
+depends-nominal:
+- "PSs9AnyObject"
+- "PSs11CVarArgType"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- "PSs8Hashable"
+- "PSo8NSCoding"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "C7FoodPin23RestaurantTableViewCell"
+- "PSo29UIAccessibilityIdentification"
+- "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "PSo17UICoordinateSpace"
+- "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "PSo27UIGestureRecognizerDelegate"
+- "CSo11UIResponder"
+- "CSo15UITableViewCell"
+- "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- "PSs12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+interface-hash: "295c1f4bd0e0d7c2f28d7ad160cef030"

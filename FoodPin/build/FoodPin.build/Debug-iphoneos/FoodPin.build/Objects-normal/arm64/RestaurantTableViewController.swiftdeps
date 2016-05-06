@@ -6,22 +6,22 @@ provides-nominal:
 provides-member:
 - ["C7FoodPin29RestaurantTableViewController", ""]
 provides-dynamic-lookup:
+- "viewDidLoad"
+- "restaurantNames"
+- "numberOfSectionsInTableView"
 - "tableView"
 - "tableView"
 - "didReceiveMemoryWarning"
-- "numberOfSectionsInTableView"
-- "restaurantNames"
-- "viewDidLoad"
 depends-top-level:
-- "UITableView"
-- "UITableViewCell"
 - "NSIndexPath"
-- "RestaurantTableViewController"
-- !private "UIImage"
+- "UITableViewController"
 - "StringLiteralType"
 - "Int"
+- "RestaurantTableViewController"
+- !private "UIImage"
+- "UITableView"
+- "UITableViewCell"
 - "Array"
-- "UITableViewController"
 depends-member:
 - !private ["PSs9AnyObject", "UIImage"]
 - !private ["PSs9AnyObject", "dequeueReusableCellWithIdentifier"]

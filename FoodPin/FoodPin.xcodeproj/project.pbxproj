@@ -12,6 +12,7 @@
 		F92E3BF31CDB09FD002E9A63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F92E3BF21CDB09FD002E9A63 /* Assets.xcassets */; };
 		F92E3BF61CDB09FD002E9A63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92E3BF41CDB09FD002E9A63 /* LaunchScreen.storyboard */; };
 		F92E3BFE1CDB0ACB002E9A63 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92E3BFD1CDB0ACB002E9A63 /* RestaurantTableViewController.swift */; };
+		F92E3C291CDC497F002E9A63 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92E3C281CDC497F002E9A63 /* RestaurantTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F92E3BF51CDB09FD002E9A63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F92E3BF71CDB09FD002E9A63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F92E3BFD1CDB0ACB002E9A63 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
+		F92E3C281CDC497F002E9A63 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				F92E3BEB1CDB09FD002E9A63 /* AppDelegate.swift */,
 				F92E3BFD1CDB0ACB002E9A63 /* RestaurantTableViewController.swift */,
+				F92E3C281CDC497F002E9A63 /* RestaurantTableViewCell.swift */,
 				F92E3BEF1CDB09FD002E9A63 /* Main.storyboard */,
 				F92E3BF21CDB09FD002E9A63 /* Assets.xcassets */,
 				F92E3BF41CDB09FD002E9A63 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F92E3BFE1CDB0ACB002E9A63 /* RestaurantTableViewController.swift in Sources */,
+				F92E3C291CDC497F002E9A63 /* RestaurantTableViewCell.swift in Sources */,
 				F92E3BEC1CDB09FD002E9A63 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +288,7 @@
 				F92E3BFC1CDB09FD002E9A63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
