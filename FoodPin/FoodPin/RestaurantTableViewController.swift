@@ -73,7 +73,15 @@ class RestaurantTableViewController: UITableViewController {
         let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .Default, handler: callActionHandler)
         optionMenu.addAction(callAction)
         
+        let isVisitedAction = UIAlertAction(title: "I've been here", style: .Default, handler: {(action: UIAlertAction) -> Void in
+            let cell = tableView.cellForRowAtIndexPath(indexPath)
+            cell?.accessoryType = .Checkmark
+        })
+        optionMenu.addAction(isVisitedAction)
+        
         self.presentViewController(optionMenu, animated: true, completion: nil)
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 
     /*
