@@ -12,6 +12,7 @@ class RestaurantTableViewController: UITableViewController {
     var restaurantNames = ["Cafe Deadend", "Homei", "Teakha", "Cafe Loisl", "Petite Oyster", "For Kee Restaurant", "Po's Atelier", "Bourke Street Bakery", "Haigh's Chocolate", "Palomino Espresso", "Upstate", "Traif", "Graham Avenue Meats","Waffle & Wolf", "Five Leaves", "Cafe Lore", "Confessional", "Barrafina", "Donostia", "Royal Oak", "Thai Cafe"]
     var restaurantLocations = ["Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Sydney", "Sydney", "Sydney", "New York", "New York", "New York", "New York", "New York", "New York", "New York", "London", "London", "London", "London"]
     var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian / Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
+    var restaurantIsVisited = [Bool](count: 21, repeatedValue: false)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,12 +54,19 @@ class RestaurantTableViewController: UITableViewController {
 //        cell.thumbnailImageView.layer.cornerRadius = 30.0
 //        cell.thumbnailImageView.clipsToBounds = true
         
+//        if restaurantIsVisited[indexPath.row]{
+//            cell.accessoryType = .Checkmark
+//        }else{
+//            cell.accessoryType = .None
+//        }
+        cell.accessoryType = restaurantIsVisited[indexPath.row] ? .Checkmark : .None
+        
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //create an opiton menu as an action sheet
-        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .Alert)
+        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .ActionSheet)
         
         //Add action to the menu
         let cancelAction = UIAlertAction(title: "Cacel", style: .Cancel, handler: nil)
@@ -76,8 +84,16 @@ class RestaurantTableViewController: UITableViewController {
         let isVisitedAction = UIAlertAction(title: "I've been here", style: .Default, handler: {(action: UIAlertAction) -> Void in
             let cell = tableView.cellForRowAtIndexPath(indexPath)
             cell?.accessoryType = .Checkmark
+            self.restaurantIsVisited[indexPath.row] = true
         })
         optionMenu.addAction(isVisitedAction)
+        
+        let isNotVisitedAction = UIAlertAction(title: "I've not been here", style: .Default, handler: {(action: UIAlertAction) -> Void in
+            let cell = tableView.cellForRowAtIndexPath(indexPath)
+            cell?.accessoryType = .None
+            self.restaurantIsVisited[indexPath.row] = false
+        })
+        optionMenu.addAction(isNotVisitedAction)
         
         self.presentViewController(optionMenu, animated: true, completion: nil)
         
