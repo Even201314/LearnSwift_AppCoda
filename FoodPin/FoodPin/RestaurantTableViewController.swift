@@ -28,6 +28,18 @@ class RestaurantTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showRestaurantDetail"{
+            if let indexPath = tableView.indexPathForSelectedRow{
+                let destinationController = segue.destinationViewController as! RestaurantDetailViewController
+                destinationController.restaurantImage = "restaurant.jpg"
+                destinationController.restaurantName = restaurantNames[indexPath.row]
+                destinationController.restautantType  = restaurantTypes[indexPath.row]
+                destinationController.restaurantLocation = restaurantLocations[indexPath.row]
+            }
+        }
+    }
 
     // MARK: - Table view data source
 
