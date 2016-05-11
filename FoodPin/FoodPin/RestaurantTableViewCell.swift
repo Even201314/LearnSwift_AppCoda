@@ -2,7 +2,7 @@
 //  RestaurantTableViewCell.swift
 //  FoodPin
 //
-//  Created by vince.yu on 6/5/16.
+//  Created by Even201314 on 6/5/16.
 //  Copyright © 2016年 Even. All rights reserved.
 //
 

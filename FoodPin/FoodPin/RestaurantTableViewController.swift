@@ -2,7 +2,7 @@
 //  RestaurantTableViewController.swift
 //  FoodPin
 //
-//  Created by vince.yu on 5/5/16.
+//  Created by Even201314 on 5/5/16.
 //  Copyright © 2016年 Even. All rights reserved.
 //
 
@@ -23,8 +23,16 @@ class RestaurantTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+
         
         initRestaurants()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -113,7 +121,7 @@ class RestaurantTableViewController: UITableViewController {
         })
         optionMenu.addAction(isNotVisitedAction)
         
-        self.presentViewController(optionMenu, animated: true, completion: nil)
+//        self.presentViewController(optionMenu, animated: true, completion: nil)
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }

@@ -2,7 +2,7 @@
 //  Restaurant.swift
 //  FoodPin
 //
-//  Created by vince.yu on 11/5/16.
+//  Created by Even201314 on 11/5/16.
 //  Copyright © 2016年 Even. All rights reserved.
 //
 
