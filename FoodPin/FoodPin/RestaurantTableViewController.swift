@@ -13,6 +13,7 @@ class RestaurantTableViewController: UITableViewController {
     var restaurantLocations = ["Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Sydney", "Sydney", "Sydney", "New York", "New York", "New York", "New York", "New York", "New York", "New York", "London", "London", "London", "London"]
     var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian / Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
     var restaurantIsVisited = [Bool](count: 21, repeatedValue: false)
+    var restaurant: [Restaurant] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,8 @@ class RestaurantTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        initRestaurants()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,14 +32,17 @@ class RestaurantTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func initRestaurants(){
+        for i in 0..<restaurantNames.count{
+            restaurant.append(Restaurant(name: restaurantNames[i], type: restaurantTypes[i], location: restaurantLocations[i], image: "restaurant.jpg", isVisited: restaurantIsVisited[i]))
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showRestaurantDetail"{
             if let indexPath = tableView.indexPathForSelectedRow{
                 let destinationController = segue.destinationViewController as! RestaurantDetailViewController
-                destinationController.restaurantImage = "restaurant.jpg"
-                destinationController.restaurantName = restaurantNames[indexPath.row]
-                destinationController.restautantType  = restaurantTypes[indexPath.row]
-                destinationController.restaurantLocation = restaurantLocations[indexPath.row]
+                destinationController.restaurant = restaurant[indexPath.row]
             }
         }
     }
@@ -50,7 +56,7 @@ class RestaurantTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return restaurantNames.count
+        return restaurant.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -58,10 +64,10 @@ class RestaurantTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RestaurantTableViewCell
 
         // Configure the cell...
-        cell.nameLabel?.text = restaurantNames[indexPath.row]
-        cell.locationLabel?.text = restaurantLocations[indexPath.row]
-        cell.typeLabel?.text = restaurantTypes[indexPath.row]
-        cell.thumbnailImageView?.image = UIImage(named: "restaurant.jpg")
+        cell.nameLabel?.text = restaurant[indexPath.row].name
+        cell.locationLabel?.text = restaurant[indexPath.row].location
+        cell.typeLabel?.text = restaurant[indexPath.row].type
+        cell.thumbnailImageView?.image = UIImage(named: restaurant[indexPath.row].image)
         
 //        cell.thumbnailImageView.layer.cornerRadius = 30.0
 //        cell.thumbnailImageView.clipsToBounds = true
@@ -71,7 +77,7 @@ class RestaurantTableViewController: UITableViewController {
 //        }else{
 //            cell.accessoryType = .None
 //        }
-        cell.accessoryType = restaurantIsVisited[indexPath.row] ? .Checkmark : .None
+        cell.accessoryType = restaurant[indexPath.row].isVisited ? .Checkmark : .None
         
         return cell
     }
@@ -96,14 +102,14 @@ class RestaurantTableViewController: UITableViewController {
         let isVisitedAction = UIAlertAction(title: "I've been here", style: .Default, handler: {(action: UIAlertAction) -> Void in
             let cell = tableView.cellForRowAtIndexPath(indexPath)
             cell?.accessoryType = .Checkmark
-            self.restaurantIsVisited[indexPath.row] = true
+            self.restaurant[indexPath.row].isVisited = true
         })
         optionMenu.addAction(isVisitedAction)
         
         let isNotVisitedAction = UIAlertAction(title: "I've not been here", style: .Default, handler: {(action: UIAlertAction) -> Void in
             let cell = tableView.cellForRowAtIndexPath(indexPath)
             cell?.accessoryType = .None
-            self.restaurantIsVisited[indexPath.row] = false
+            self.restaurant[indexPath.row].isVisited  = false
         })
         optionMenu.addAction(isNotVisitedAction)
         
@@ -125,10 +131,7 @@ class RestaurantTableViewController: UITableViewController {
         if editingStyle == .Delete {
             // Delete the row from the data source
             
-            restaurantNames.removeAtIndex(indexPath.row)
-            restaurantLocations.removeAtIndex(indexPath.row)
-            restaurantTypes.removeAtIndex(indexPath.row)
-            restaurantIsVisited.removeAtIndex(indexPath.row)
+            restaurant.removeAtIndex(indexPath.row)
             
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
@@ -142,17 +145,14 @@ class RestaurantTableViewController: UITableViewController {
         
         //Social Sharing Button
         let shareAction = UITableViewRowAction(style: .Default, title: "Share", handler: {(action, indexPath) -> Void in
-            let defaultText  = "Just checking in at " + self.restaurantNames[indexPath.row]
+            let defaultText  = "Just checking in at " + self.restaurant[indexPath.row].name
             let activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
             self.presentViewController(activityController, animated: true, completion: nil)
         })
         
         //Delete Button
         let deleteAction = UITableViewRowAction(style: .Default, title: "Delete", handler: {(action, indexPath) -> Void in
-            self.restaurantNames.removeAtIndex(indexPath.row)
-            self.restaurantLocations.removeAtIndex(indexPath.row)
-            self.restaurantTypes.removeAtIndex(indexPath.row)
-            self.restaurantIsVisited.removeAtIndex(indexPath.row)
+            self.restaurant.removeAtIndex(indexPath.row)
             
             self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         })
