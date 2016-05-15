@@ -8,12 +8,19 @@
 
 import UIKit
 
+protocol UpdateRestaurant {
+    func updateRating(rating: String, restaurantAtIndex: Int)
+}
+
 class RestaurantDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var restaurantImageView: UIImageView!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var ratingButton: UIButton!
     
     var restaurant: Restaurant!
+    var restaurantIndex: Int = 0
+    var updateRestaurant: UpdateRestaurant!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +32,8 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         tableView.backgroundColor = UIColor(red: 240.0 / 255.0, green: 240.0 / 255.0, blue: 240.0 / 255.0, alpha: 0.2)
         tableView.tableFooterView = UIView(frame: CGRectZero)
         tableView.separatorColor = UIColor(red: 240.0 / 255.0, green: 240.0 / 255.0, blue: 240.0 / 255.0, alpha: 0.8)
+        
+        ratingButton.setImage(UIImage(named:  restaurant.rating), forState: .Normal)
         
         tableView.estimatedRowHeight = 36.0
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -72,7 +81,15 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     }
 
     @IBAction func close(segue: UIStoryboardSegue){
-        
+        if let reviewViewController = segue.sourceViewController as? ReviewViewController{
+            if let rating = reviewViewController.rating {
+                ratingButton.setImage(UIImage(named:  rating), forState: .Normal)
+                restaurant.rating = rating
+                if updateRestaurant != nil {
+                    updateRestaurant.updateRating(rating, restaurantAtIndex: restaurantIndex)
+                }
+            }
+        }
     }
     
     /*
