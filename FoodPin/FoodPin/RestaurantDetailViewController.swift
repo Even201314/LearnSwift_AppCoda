@@ -21,10 +21,10 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     var restaurant: Restaurant!
     var restaurantIndex: Int = 0
     var updateRestaurant: UpdateRestaurant!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         title = restaurant.name
         
@@ -37,6 +37,8 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         
         tableView.estimatedRowHeight = 36.0
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -45,10 +47,17 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         navigationController?.hidesBarsOnSwipe = false
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showMap"{
+            let destinationController = segue.destinationViewController as! MapViewController
+            destinationController.restaurant = restaurant
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,7 +88,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         cell.backgroundColor = UIColor.clearColor()
         return cell
     }
-
+    
     @IBAction func close(segue: UIStoryboardSegue){
         if let reviewViewController = segue.sourceViewController as? ReviewViewController{
             if let rating = reviewViewController.rating {
@@ -93,15 +102,15 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     
-
+    
 }

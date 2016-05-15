@@ -33,13 +33,13 @@ class RestaurantTableViewController: UITableViewController,UpdateRestaurant {
         Restaurant(name: "Royal Oak", type: "British", location: "2 Regency Street London SW1P 4BZ United Kingdom", phoneNumber: "343-988834", image: "royaloak.jpg", isVisited: false, rating: "rating"),
         Restaurant(name: "Thai Cafe", type: "Thai", location: "22 Charlwood Street London SW1V 2DY Pimlico", phoneNumber: "432-344050", image: "thaicafe.jpg", isVisited: false, rating: "rating")
     ]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
@@ -53,7 +53,7 @@ class RestaurantTableViewController: UITableViewController,UpdateRestaurant {
         tableView.estimatedRowHeight = 80.0
         tableView.rowHeight = UITableViewAutomaticDimension
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -81,37 +81,37 @@ class RestaurantTableViewController: UITableViewController,UpdateRestaurant {
             }
         }
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return restaurants.count
     }
-
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RestaurantTableViewCell
-
+        
         // Configure the cell...
         cell.nameLabel?.text = restaurants[indexPath.row].name
         cell.locationLabel?.text = restaurants[indexPath.row].location
         cell.typeLabel?.text = restaurants[indexPath.row].type
         cell.thumbnailImageView?.image = UIImage(named: restaurants[indexPath.row].image)
         
-//        cell.thumbnailImageView.layer.cornerRadius = 30.0
-//        cell.thumbnailImageView.clipsToBounds = true
+        //        cell.thumbnailImageView.layer.cornerRadius = 30.0
+        //        cell.thumbnailImageView.clipsToBounds = true
         
-//        if restaurantIsVisited[indexPath.row]{
-//            cell.accessoryType = .Checkmark
-//        }else{
-//            cell.accessoryType = .None
-//        }
+        //        if restaurantIsVisited[indexPath.row]{
+        //            cell.accessoryType = .Checkmark
+        //        }else{
+        //            cell.accessoryType = .None
+        //        }
         cell.accessoryType = restaurants[indexPath.row].isVisited ? .Checkmark : .None
         
         return cell
@@ -148,19 +148,19 @@ class RestaurantTableViewController: UITableViewController,UpdateRestaurant {
         })
         optionMenu.addAction(isNotVisitedAction)
         
-//        self.presentViewController(optionMenu, animated: true, completion: nil)
+        //        self.presentViewController(optionMenu, animated: true, completion: nil)
         
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
-
+    
     /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
+     // Override to support conditional editing of the table view.
+     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+     // Return false if you do not want the specified item to be editable.
+     return true
+     }
+     */
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
@@ -197,30 +197,30 @@ class RestaurantTableViewController: UITableViewController,UpdateRestaurant {
         
         return [shareAction, deleteAction]
     }
-
+    
     /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
+     // Override to support rearranging the table view.
+     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+     
+     }
+     */
+    
     /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
+     // Override to support conditional rearranging of the table view.
+     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+     // Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

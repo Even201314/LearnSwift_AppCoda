@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		30498FC81CE22F63008E9BF4 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30498FC71CE22F63008E9BF4 /* RestaurantDetailViewController.swift */; };
 		304B3C681CE7771B0058C423 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304B3C671CE7771B0058C423 /* ReviewViewController.swift */; };
+		309B2F1D1CE85E4300FA6AAF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309B2F1C1CE85E4300FA6AAF /* MapKit.framework */; };
+		309B2F1F1CE863A400FA6AAF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309B2F1E1CE863A400FA6AAF /* MapViewController.swift */; };
 		F92E3BEC1CDB09FD002E9A63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92E3BEB1CDB09FD002E9A63 /* AppDelegate.swift */; };
 		F92E3BF11CDB09FD002E9A63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92E3BEF1CDB09FD002E9A63 /* Main.storyboard */; };
 		F92E3BF31CDB09FD002E9A63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F92E3BF21CDB09FD002E9A63 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		30498FC71CE22F63008E9BF4 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		304B3C671CE7771B0058C423 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		309B2F1C1CE85E4300FA6AAF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		309B2F1E1CE863A400FA6AAF /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F92E3BE81CDB09FD002E9A63 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F92E3BEB1CDB09FD002E9A63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F92E3BF01CDB09FD002E9A63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				309B2F1D1CE85E4300FA6AAF /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,7 @@
 		F92E3BDF1CDB09FD002E9A63 = {
 			isa = PBXGroup;
 			children = (
+				309B2F1C1CE85E4300FA6AAF /* MapKit.framework */,
 				F92E3BEA1CDB09FD002E9A63 /* FoodPin */,
 				F92E3BE91CDB09FD002E9A63 /* Products */,
 			);
@@ -71,6 +77,7 @@
 				F92E3C2C1CE318ED002E9A63 /* RestaurantDetailTableViewCell.swift */,
 				F92E3C2A1CE304E9002E9A63 /* Restaurant.swift */,
 				304B3C671CE7771B0058C423 /* ReviewViewController.swift */,
+				309B2F1E1CE863A400FA6AAF /* MapViewController.swift */,
 				F92E3BEF1CDB09FD002E9A63 /* Main.storyboard */,
 				F92E3BF21CDB09FD002E9A63 /* Assets.xcassets */,
 				F92E3BF41CDB09FD002E9A63 /* LaunchScreen.storyboard */,
@@ -111,6 +118,11 @@
 				TargetAttributes = {
 					F92E3BE71CDB09FD002E9A63 = {
 						CreatedOnToolsVersion = 7.2;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -157,6 +169,7 @@
 				F92E3C2D1CE318ED002E9A63 /* RestaurantDetailTableViewCell.swift in Sources */,
 				30498FC81CE22F63008E9BF4 /* RestaurantDetailViewController.swift in Sources */,
 				F92E3BEC1CDB09FD002E9A63 /* AppDelegate.swift in Sources */,
+				309B2F1F1CE863A400FA6AAF /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
