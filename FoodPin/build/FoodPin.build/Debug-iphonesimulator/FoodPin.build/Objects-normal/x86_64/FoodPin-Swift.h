@@ -88,6 +88,7 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
 @import MapKit;
+@import CoreData;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -95,6 +96,7 @@ typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 @class UIImageView;
 @class UITextField;
 @class UIButton;
+@class Restaurant;
 @class UITableView;
 @class NSIndexPath;
 @class UIImagePickerController;
@@ -107,8 +109,11 @@ SWIFT_CLASS("_TtC7FoodPin32AddRestaurantTableViewController")
 @property (nonatomic, strong) IBOutlet UITextField * __null_unspecified nameTextField;
 @property (nonatomic, strong) IBOutlet UITextField * __null_unspecified typeTextField;
 @property (nonatomic, strong) IBOutlet UITextField * __null_unspecified locationTextField;
+@property (nonatomic, strong) IBOutlet UITextField * __null_unspecified phoneNumberTextField;
 @property (nonatomic, strong) IBOutlet UIButton * __null_unspecified yesButton;
 @property (nonatomic, strong) IBOutlet UIButton * __null_unspecified noButton;
+@property (nonatomic, strong) Restaurant * __null_unspecified restaurant;
+@property (nonatomic) BOOL isVisited;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (void)tableView:(UITableView * __nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
@@ -124,6 +129,10 @@ SWIFT_CLASS("_TtC7FoodPin32AddRestaurantTableViewController")
 @class UIWindow;
 @class UIApplication;
 @class NSObject;
+@class NSURL;
+@class NSManagedObjectModel;
+@class NSPersistentStoreCoordinator;
+@class NSManagedObjectContext;
 
 SWIFT_CLASS("_TtC7FoodPin11AppDelegate")
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
@@ -134,6 +143,11 @@ SWIFT_CLASS("_TtC7FoodPin11AppDelegate")
 - (void)applicationWillEnterForeground:(UIApplication * __nonnull)application;
 - (void)applicationDidBecomeActive:(UIApplication * __nonnull)application;
 - (void)applicationWillTerminate:(UIApplication * __nonnull)application;
+@property (nonatomic, strong) NSURL * __nonnull applicationDocumentsDirectory;
+@property (nonatomic, strong) NSManagedObjectModel * __nonnull managedObjectModel;
+@property (nonatomic, strong) NSPersistentStoreCoordinator * __nonnull persistentStoreCoordinator;
+@property (nonatomic, strong) NSManagedObjectContext * __nonnull managedObjectContext;
+- (void)saveContext;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -144,11 +158,28 @@ SWIFT_CLASS("_TtC7FoodPin11AppDelegate")
 SWIFT_CLASS("_TtC7FoodPin17MapViewController")
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 @property (nonatomic, strong) IBOutlet MKMapView * __null_unspecified mapView;
+@property (nonatomic, strong) Restaurant * __null_unspecified restaurant;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (MKAnnotationView * __nullable)mapView:(MKMapView * __nonnull)mapView viewForAnnotation:(id <MKAnnotation> __nonnull)annotation;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class NSData;
+@class NSNumber;
+@class NSEntityDescription;
+
+SWIFT_CLASS("_TtC7FoodPin10Restaurant")
+@interface Restaurant : NSManagedObject
+@property (nonatomic, copy) NSString * __nonnull name;
+@property (nonatomic, copy) NSString * __nonnull type;
+@property (nonatomic, copy) NSString * __nonnull location;
+@property (nonatomic, strong) NSData * __nullable image;
+@property (nonatomic, copy) NSString * __nullable phoneNumber;
+@property (nonatomic, strong) NSNumber * __nullable isVisited;
+@property (nonatomic, copy) NSString * __nullable rating;
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * __nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * __nullable)context OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UILabel;
@@ -168,6 +199,7 @@ SWIFT_CLASS("_TtC7FoodPin30RestaurantDetailViewController")
 @property (nonatomic, strong) IBOutlet UIImageView * __null_unspecified restaurantImageView;
 @property (nonatomic, strong) IBOutlet UITableView * __null_unspecified tableView;
 @property (nonatomic, strong) IBOutlet UIButton * __null_unspecified ratingButton;
+@property (nonatomic, strong) Restaurant * __null_unspecified restaurant;
 @property (nonatomic) NSInteger restaurantIndex;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
@@ -193,12 +225,18 @@ SWIFT_CLASS("_TtC7FoodPin23RestaurantTableViewCell")
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSFetchedResultsController;
 @class UITableViewRowAction;
 
 SWIFT_CLASS("_TtC7FoodPin29RestaurantTableViewController")
-@interface RestaurantTableViewController : UITableViewController
+@interface RestaurantTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@property (nonatomic, strong) NSFetchedResultsController * __null_unspecified fetchedResultController;
 @property (nonatomic, copy) NSArray<NSNumber *> * __nonnull restaurantIsVisited;
+@property (nonatomic, copy) NSArray<Restaurant *> * __nonnull restaurants;
 - (void)viewDidLoad;
+- (void)controllerWillChangeContent:(NSFetchedResultsController * __nonnull)controller;
+- (void)controller:(NSFetchedResultsController * __nonnull)controller didChangeObject:(id __nonnull)anObject atIndexPath:(NSIndexPath * __nullable)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath * __nullable)newIndexPath;
+- (void)controllerDidChangeContent:(NSFetchedResultsController * __nonnull)controller;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
 - (void)prepareForSegue:(UIStoryboardSegue * __nonnull)segue sender:(id __nullable)sender;

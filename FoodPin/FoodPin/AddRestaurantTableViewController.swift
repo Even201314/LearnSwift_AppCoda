@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddRestaurantTableViewController: UITableViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     @IBOutlet var imageView: UIImageView!
@@ -14,17 +15,17 @@ class AddRestaurantTableViewController: UITableViewController,UIImagePickerContr
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var typeTextField: UITextField!
     @IBOutlet var locationTextField: UITextField!
+    @IBOutlet var phoneNumberTextField: UITextField!
     @IBOutlet var yesButton: UIButton!
     @IBOutlet var noButton: UIButton!
     
     var restaurant: Restaurant!
+    var isVisited: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        restaurant = Restaurant()
-        
-        restaurant.isVisited = true
+        isVisited = true
         yesButton.backgroundColor = UIColor.redColor()
         noButton.backgroundColor = UIColor.grayColor()
         // Uncomment the following line to preserve selection between presentations
@@ -83,9 +84,28 @@ class AddRestaurantTableViewController: UITableViewController,UIImagePickerContr
             self.presentViewController(alertController, animated: true, completion: nil)
             return
         }
-        restaurant.name = nameTextField.text!
-        restaurant.type = typeTextField.text!
-        restaurant.location = locationTextField.text!
+
+        
+        if let managedObjectContext = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext{
+            restaurant = NSEntityDescription.insertNewObjectForEntityForName("Restaurant", inManagedObjectContext: managedObjectContext) as! Restaurant
+            
+            restaurant.name = nameTextField.text!
+            restaurant.type = typeTextField.text!
+            restaurant.location = locationTextField.text!
+            restaurant.phoneNumber = phoneNumberTextField.text!
+            
+            if let restaurantImage = imageView.image{
+                restaurant.image = UIImagePNGRepresentation(restaurantImage)
+            }
+            restaurant.isVisited = isVisited ? 1 :0;
+            
+            do{
+                try managedObjectContext.save()
+            }catch{
+                print(error)
+                return
+            }
+        }
         
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -115,16 +135,24 @@ class AddRestaurantTableViewController: UITableViewController,UIImagePickerContr
             return false
         }
         
+        if let phoneNumber = phoneNumberTextField.text{
+            if phoneNumber == ""{
+                return false
+            }
+        }else{
+            return false
+        }
+        
         return true
     }
     
     @IBAction func toggleBeenHereButton(sender: UIButton){
         if sender == yesButton{
-            restaurant.isVisited = true
+            isVisited = true
             yesButton.backgroundColor = UIColor.redColor()
             noButton.backgroundColor = UIColor.grayColor()
         }else if sender == noButton{
-            restaurant.isVisited = false
+            isVisited = false
             yesButton.backgroundColor = UIColor.grayColor()
             noButton.backgroundColor = UIColor.redColor()
         }

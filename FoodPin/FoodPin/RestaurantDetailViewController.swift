@@ -28,12 +28,14 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         // Do any additional setup after loading the view.
         title = restaurant.name
         
-        restaurantImageView.image = UIImage(named: restaurant.image)
+        restaurantImageView.image = UIImage(data: restaurant.image!)
         tableView.backgroundColor = UIColor(red: 240.0 / 255.0, green: 240.0 / 255.0, blue: 240.0 / 255.0, alpha: 0.2)
         tableView.tableFooterView = UIView(frame: CGRectZero)
         tableView.separatorColor = UIColor(red: 240.0 / 255.0, green: 240.0 / 255.0, blue: 240.0 / 255.0, alpha: 0.8)
         
-        ratingButton.setImage(UIImage(named:  restaurant.rating), forState: .Normal)
+        if let rating = restaurant.rating where rating != ""{
+            ratingButton.setImage(UIImage(named:  restaurant.rating!), forState: .Normal)
+        }
         
         tableView.estimatedRowHeight = 36.0
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -61,7 +63,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -79,7 +81,13 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             cell.valueLabel.text = restaurant.location
         case 3:
             cell.fieldLabel.text = "Been Here"
-            cell.valueLabel.text = restaurant.isVisited ? "Yes, I've been here" : "No"
+            if let isVisited = restaurant.isVisited?.boolValue{
+                cell.valueLabel.text = isVisited ? "Yes, I've been here" : "No"
+
+            }
+        case 4:
+            cell.fieldLabel.text = "Phone Number"
+            cell.valueLabel.text = restaurant.phoneNumber
         default:
             cell.fieldLabel.text = ""
             cell.valueLabel.text = ""
@@ -96,6 +104,14 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
                 restaurant.rating = rating
                 if updateRestaurant != nil {
                     updateRestaurant.updateRating(rating, restaurantAtIndex: restaurantIndex)
+                }
+                
+                if let managedObjectContext = (UIApplication.sharedApplication().delegate as? AppDelegate)?.managedObjectContext{
+                    do{
+                        try managedObjectContext.save()
+                    }catch{
+                        print(error)
+                    }
                 }
             }
         }
