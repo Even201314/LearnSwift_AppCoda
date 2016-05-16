@@ -87,10 +87,40 @@ typedef int swift_int3  __attribute__((__ext_vector_type__(3)));
 typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import MapKit;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
+@class UIImageView;
+@class UITextField;
+@class UIButton;
+@class UITableView;
+@class NSIndexPath;
+@class UIImagePickerController;
+@class NSBundle;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC7FoodPin32AddRestaurantTableViewController")
+@interface AddRestaurantTableViewController : UITableViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (nonatomic, strong) IBOutlet UIImageView * __null_unspecified imageView;
+@property (nonatomic, strong) IBOutlet UITextField * __null_unspecified nameTextField;
+@property (nonatomic, strong) IBOutlet UITextField * __null_unspecified typeTextField;
+@property (nonatomic, strong) IBOutlet UITextField * __null_unspecified locationTextField;
+@property (nonatomic, strong) IBOutlet UIButton * __null_unspecified yesButton;
+@property (nonatomic, strong) IBOutlet UIButton * __null_unspecified noButton;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (void)tableView:(UITableView * __nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+- (void)imagePickerController:(UIImagePickerController * __nonnull)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *, id> * __nonnull)info;
+- (IBAction)saveRestaurant;
+- (BOOL)checkIsRestaurantAvailable;
+- (IBAction)toggleBeenHereButton:(UIButton * __nonnull)sender;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIWindow;
 @class UIApplication;
 @class NSObject;
@@ -107,9 +137,49 @@ SWIFT_CLASS("_TtC7FoodPin11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class MKMapView;
+@protocol MKAnnotation;
+@class MKAnnotationView;
+
+SWIFT_CLASS("_TtC7FoodPin17MapViewController")
+@interface MapViewController : UIViewController <MKMapViewDelegate>
+@property (nonatomic, strong) IBOutlet MKMapView * __null_unspecified mapView;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (MKAnnotationView * __nullable)mapView:(MKMapView * __nonnull)mapView viewForAnnotation:(id <MKAnnotation> __nonnull)annotation;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UILabel;
-@class UIImageView;
-@class NSCoder;
+
+SWIFT_CLASS("_TtC7FoodPin29RestaurantDetailTableViewCell")
+@interface RestaurantDetailTableViewCell : UITableViewCell
+@property (nonatomic, strong) IBOutlet UILabel * __null_unspecified fieldLabel;
+@property (nonatomic, strong) IBOutlet UILabel * __null_unspecified valueLabel;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * __nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIStoryboardSegue;
+
+SWIFT_CLASS("_TtC7FoodPin30RestaurantDetailViewController")
+@interface RestaurantDetailViewController : UIViewController <UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong) IBOutlet UIImageView * __null_unspecified restaurantImageView;
+@property (nonatomic, strong) IBOutlet UITableView * __null_unspecified tableView;
+@property (nonatomic, strong) IBOutlet UIButton * __null_unspecified ratingButton;
+@property (nonatomic) NSInteger restaurantIndex;
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)didReceiveMemoryWarning;
+- (void)prepareForSegue:(UIStoryboardSegue * __nonnull)segue sender:(id __nullable)sender;
+- (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+- (IBAction)close:(UIStoryboardSegue * __nonnull)segue;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC7FoodPin23RestaurantTableViewCell")
 @interface RestaurantTableViewCell : UITableViewCell
@@ -123,22 +193,43 @@ SWIFT_CLASS("_TtC7FoodPin23RestaurantTableViewCell")
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UITableView;
-@class NSIndexPath;
-@class NSBundle;
+@class UITableViewRowAction;
 
 SWIFT_CLASS("_TtC7FoodPin29RestaurantTableViewController")
 @interface RestaurantTableViewController : UITableViewController
-@property (nonatomic, copy) NSArray<NSString *> * __nonnull restaurantNames;
-@property (nonatomic, copy) NSArray<NSString *> * __nonnull restaurantLocations;
-@property (nonatomic, copy) NSArray<NSString *> * __nonnull restaurantTypes;
+@property (nonatomic, copy) NSArray<NSNumber *> * __nonnull restaurantIsVisited;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
+- (void)prepareForSegue:(UIStoryboardSegue * __nonnull)segue sender:(id __nullable)sender;
+- (IBAction)unwindToHomeScreen:(UIStoryboardSegue * __nonnull)segue;
+- (void)updateRating:(NSString * __nonnull)rating restaurantAtIndex:(NSInteger)restaurantAtIndex;
+- (IBAction)close:(UIStoryboardSegue * __nonnull)segue;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * __nonnull)tableView;
 - (NSInteger)tableView:(UITableView * __nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell * __nonnull)tableView:(UITableView * __nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
 - (void)tableView:(UITableView * __nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+- (void)tableView:(UITableView * __nonnull)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
+- (NSArray<UITableViewRowAction *> * __nullable)tableView:(UITableView * __nonnull)tableView editActionsForRowAtIndexPath:(NSIndexPath * __nonnull)indexPath;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIStackView;
+
+SWIFT_CLASS("_TtC7FoodPin20ReviewViewController")
+@interface ReviewViewController : UIViewController
+@property (nonatomic, strong) IBOutlet UIImageView * __null_unspecified backgroundImageView;
+@property (nonatomic, strong) IBOutlet UIStackView * __null_unspecified ratingStackView;
+@property (nonatomic, strong) IBOutlet UIButton * __null_unspecified disLikeButton;
+@property (nonatomic, strong) IBOutlet UIButton * __null_unspecified goodButton;
+@property (nonatomic, strong) IBOutlet UIButton * __null_unspecified greatButton;
+@property (nonatomic, copy) NSString * __nullable rating;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (void)viewDidAppear:(BOOL)animated;
+- (IBAction)ratingSelected:(UIButton * __nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

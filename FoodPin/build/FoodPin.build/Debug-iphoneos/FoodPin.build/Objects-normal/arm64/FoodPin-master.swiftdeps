@@ -1,7 +1,12 @@
 version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
 options: "63a5ad6999857d9a88e0e6fb6ed6fdd3"
-build_time: [515821185, 866615000]
+build_time: [516676602, 815191000]
 inputs:
-  "/Users/vince.yu/Desktop/iOSProject/LearnSwift_AppCoda/FoodPin/FoodPin/RestaurantTableViewCell.swift": [515821182, 0]
-  "/Users/vince.yu/Desktop/iOSProject/LearnSwift_AppCoda/FoodPin/FoodPin/AppDelegate.swift": [515739389, 0]
-  "/Users/vince.yu/Desktop/iOSProject/LearnSwift_AppCoda/FoodPin/FoodPin/RestaurantTableViewController.swift": [515746545, 0]
+  "/Users/vince.yu/Desktop/iOSProject/LearnSwift_AppCoda/FoodPin/FoodPin/RestaurantTableViewCell.swift": [516269251, 0]
+  "/Users/vince.yu/Desktop/iOSProject/LearnSwift_AppCoda/FoodPin/FoodPin/AppDelegate.swift": [516271184, 0]
+  "/Users/vince.yu/Desktop/iOSProject/LearnSwift_AppCoda/FoodPin/FoodPin/RestaurantTableViewController.swift": [516676325, 0]
+  "/Users/vince.yu/Desktop/iOSProject/LearnSwift_AppCoda/FoodPin/FoodPin/RestaurantDetailTableViewCell.swift": [516269251, 0]
+  "/Users/vince.yu/Desktop/iOSProject/LearnSwift_AppCoda/FoodPin/FoodPin/Restaurant.swift": [516676325, 0]
+  "/Users/vince.yu/Desktop/iOSProject/LearnSwift_AppCoda/FoodPin/FoodPin/MapViewController.swift": [9223372036854775807, 0]
+  "/Users/vince.yu/Desktop/iOSProject/LearnSwift_AppCoda/FoodPin/FoodPin/ReviewViewController.swift": [9223372036854775807, 0]
+  "/Users/vince.yu/Desktop/iOSProject/LearnSwift_AppCoda/FoodPin/FoodPin/RestaurantDetailViewController.swift": [516676325, 0]
