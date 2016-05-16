@@ -6,66 +6,66 @@ provides-nominal:
 provides-member:
 - ["C7FoodPin29RestaurantTableViewController", ""]
 provides-dynamic-lookup:
-- "restaurantIsVisited"
-- "unwindToHomeScreen"
 - "updateRating"
-- "close"
-- "controllerWillChangeContent"
-- "numberOfSectionsInTableView"
-- "controller"
 - "didReceiveMemoryWarning"
-- "fetchedResultController"
-- "restaurants"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "controllerDidChangeContent"
-- "viewWillAppear"
-- "prepareForSegue"
+- "restaurantIsVisited"
 - "viewDidLoad"
+- "unwindToHomeScreen"
+- "numberOfSectionsInTableView"
+- "controllerWillChangeContent"
+- "restaurants"
+- "controllerDidChangeContent"
+- "fetchedResultController"
+- "controller"
+- "close"
+- "viewWillAppear"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "prepareForSegue"
 depends-top-level:
-- !private "UIColor"
-- "Restaurant"
-- "Bool"
-- !private "/"
-- !private "Array"
-- "UIStoryboardSegue"
-- "UITableViewController"
-- !private "StringLiteralType"
-- !private "UIApplication"
-- !private "RestaurantTableViewCell"
-- "UITableViewCellEditingStyle"
-- !private "=="
-- "UITableViewCell"
-- !private "print"
-- "String"
-- "NSFetchedResultsControllerDelegate"
-- "NSIndexPath"
 - "NSFetchedResultsController"
-- "UpdateRestaurant"
-- "BooleanLiteralType"
-- "RestaurantTableViewController"
-- "UITableView"
+- "Restaurant"
 - "AnyObject"
-- !private "WalkthroughPageViewController"
-- !private "NSSortDescriptor"
-- "UITableViewRowAction"
-- !private "NSUserDefaults"
-- !private "RestaurantDetailViewController"
+- !private "=="
 - !private "UIAlertController"
-- !private "NSFetchRequest"
-- !private "UIAlertAction"
-- !private "UIBarButtonItem"
-- !private "Void"
-- !private "!"
-- !private "+"
+- "RestaurantTableViewController"
 - !private "UIImage"
-- !private "AppDelegate"
-- "NSFetchedResultsChangeType"
-- !private "UIActivityViewController"
+- "UITableViewRowAction"
+- "NSIndexPath"
 - "Int"
+- !private "NSSortDescriptor"
+- !private "RestaurantTableViewCell"
+- !private "UIAlertAction"
+- !private "StringLiteralType"
+- !private "Array"
+- !private "UIBarButtonItem"
+- "UITableViewCellEditingStyle"
+- !private "!"
+- !private "UIColor"
+- "UITableViewCell"
+- !private "NSFetchRequest"
+- "NSFetchedResultsControllerDelegate"
+- "String"
+- !private "WalkthroughPageViewController"
+- "UpdateRestaurant"
+- !private "AppDelegate"
+- !private "+"
+- !private "Void"
+- !private "UIApplication"
+- !private "/"
+- "Bool"
+- !private "print"
+- !private "NSUserDefaults"
+- !private "UIActivityViewController"
+- "NSFetchedResultsChangeType"
+- !private "RestaurantDetailViewController"
+- "UITableViewController"
+- "UIStoryboardSegue"
+- "UITableView"
+- "BooleanLiteralType"
 - !private "UITableViewAutomaticDimension"
 depends-member:
 - ["PSs9AnyObject", "Bool"]
@@ -105,6 +105,7 @@ depends-member:
 - !private ["PSs9AnyObject", "fetchedObjects"]
 - ["PSs9AnyObject", "fetchedResultController"]
 - !private ["PSs9AnyObject", "hidesBarsOnSwipe"]
+- !private ["PSs9AnyObject", "hidesBottomBarWhenPushed"]
 - !private ["PSs9AnyObject", "identifier"]
 - !private ["PSs9AnyObject", "image"]
 - !private ["PSs9AnyObject", "indexPathForSelectedRow"]
@@ -220,6 +221,7 @@ depends-member:
 - !private ["PSs11CVarArgType", "fetchedObjects"]
 - ["PSs11CVarArgType", "fetchedResultController"]
 - !private ["PSs11CVarArgType", "hidesBarsOnSwipe"]
+- !private ["PSs11CVarArgType", "hidesBottomBarWhenPushed"]
 - !private ["PSs11CVarArgType", "identifier"]
 - !private ["PSs11CVarArgType", "image"]
 - !private ["PSs11CVarArgType", "indexPathForSelectedRow"]
@@ -333,6 +335,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "fetchedObjects"]
 - ["PSs23CustomStringConvertible", "fetchedResultController"]
 - !private ["PSs23CustomStringConvertible", "hidesBarsOnSwipe"]
+- !private ["PSs23CustomStringConvertible", "hidesBottomBarWhenPushed"]
 - !private ["PSs23CustomStringConvertible", "identifier"]
 - !private ["PSs23CustomStringConvertible", "image"]
 - !private ["PSs23CustomStringConvertible", "indexPathForSelectedRow"]
@@ -432,6 +435,7 @@ depends-member:
 - !private ["PSs9Equatable", "fetchedObjects"]
 - ["PSs9Equatable", "fetchedResultController"]
 - !private ["PSs9Equatable", "hidesBarsOnSwipe"]
+- !private ["PSs9Equatable", "hidesBottomBarWhenPushed"]
 - !private ["PSs9Equatable", "identifier"]
 - !private ["PSs9Equatable", "image"]
 - !private ["PSs9Equatable", "indexPathForSelectedRow"]
@@ -534,6 +538,7 @@ depends-member:
 - !private ["PSs8Hashable", "fetchedObjects"]
 - ["PSs8Hashable", "fetchedResultController"]
 - !private ["PSs8Hashable", "hidesBarsOnSwipe"]
+- !private ["PSs8Hashable", "hidesBottomBarWhenPushed"]
 - !private ["PSs8Hashable", "identifier"]
 - !private ["PSs8Hashable", "image"]
 - !private ["PSs8Hashable", "indexPathForSelectedRow"]
@@ -664,6 +669,7 @@ depends-member:
 - !private ["PSo8NSCoding", "estimatedRowHeight"]
 - ["PSo8NSCoding", "fetchedResultController"]
 - !private ["PSo8NSCoding", "hidesBarsOnSwipe"]
+- !private ["PSo8NSCoding", "hidesBottomBarWhenPushed"]
 - !private ["PSo8NSCoding", "image"]
 - !private ["PSo8NSCoding", "indexPathForSelectedRow"]
 - ["PSo8NSCoding", "init"]
@@ -723,6 +729,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - ["PSo26NSExtensionRequestHandling", "fetchedResultController"]
 - !private ["PSo26NSExtensionRequestHandling", "hidesBarsOnSwipe"]
+- !private ["PSo26NSExtensionRequestHandling", "hidesBottomBarWhenPushed"]
 - ["PSo26NSExtensionRequestHandling", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationController"]
 - !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
@@ -840,6 +847,7 @@ depends-member:
 - !private ["CSo8NSObject", "fetchedObjects"]
 - ["CSo8NSObject", "fetchedResultController"]
 - !private ["CSo8NSObject", "hidesBarsOnSwipe"]
+- !private ["CSo8NSObject", "hidesBottomBarWhenPushed"]
 - !private ["CSo8NSObject", "identifier"]
 - !private ["CSo8NSObject", "image"]
 - !private ["CSo8NSObject", "indexPathForSelectedRow"]
@@ -920,6 +928,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "fetchedObjects"]
 - ["PSo16NSObjectProtocol", "fetchedResultController"]
 - !private ["PSo16NSObjectProtocol", "hidesBarsOnSwipe"]
+- !private ["PSo16NSObjectProtocol", "hidesBottomBarWhenPushed"]
 - !private ["PSo16NSObjectProtocol", "identifier"]
 - !private ["PSo16NSObjectProtocol", "image"]
 - !private ["PSo16NSObjectProtocol", "indexPathForSelectedRow"]
@@ -1007,6 +1016,7 @@ depends-member:
 - !private ["C7FoodPin10Restaurant", "name"]
 - !private ["C7FoodPin10Restaurant", "rating"]
 - !private ["C7FoodPin10Restaurant", "type"]
+- !private ["C7FoodPin30RestaurantDetailViewController", "hidesBottomBarWhenPushed"]
 - !private ["C7FoodPin30RestaurantDetailViewController", "restaurant"]
 - !private ["C7FoodPin30RestaurantDetailViewController", "restaurantIndex"]
 - !private ["C7FoodPin30RestaurantDetailViewController", "updateRestaurant"]
@@ -1168,6 +1178,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "estimatedRowHeight"]
 - ["PSo21UIAppearanceContainer", "fetchedResultController"]
 - !private ["PSo21UIAppearanceContainer", "hidesBarsOnSwipe"]
+- !private ["PSo21UIAppearanceContainer", "hidesBottomBarWhenPushed"]
 - !private ["PSo21UIAppearanceContainer", "image"]
 - !private ["PSo21UIAppearanceContainer", "indexPathForSelectedRow"]
 - ["PSo21UIAppearanceContainer", "init"]
@@ -1227,6 +1238,7 @@ depends-member:
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - ["PSo18UIContentContainer", "fetchedResultController"]
 - !private ["PSo18UIContentContainer", "hidesBarsOnSwipe"]
+- !private ["PSo18UIContentContainer", "hidesBottomBarWhenPushed"]
 - ["PSo18UIContentContainer", "init"]
 - !private ["PSo18UIContentContainer", "navigationController"]
 - !private ["PSo18UIContentContainer", "navigationItem"]
@@ -1314,6 +1326,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "estimatedRowHeight"]
 - ["PSo18UIFocusEnvironment", "fetchedResultController"]
 - !private ["PSo18UIFocusEnvironment", "hidesBarsOnSwipe"]
+- !private ["PSo18UIFocusEnvironment", "hidesBottomBarWhenPushed"]
 - !private ["PSo18UIFocusEnvironment", "image"]
 - !private ["PSo18UIFocusEnvironment", "indexPathForSelectedRow"]
 - ["PSo18UIFocusEnvironment", "init"]
@@ -1400,6 +1413,7 @@ depends-member:
 - !private ["CSo11UIResponder", "estimatedRowHeight"]
 - ["CSo11UIResponder", "fetchedResultController"]
 - !private ["CSo11UIResponder", "hidesBarsOnSwipe"]
+- !private ["CSo11UIResponder", "hidesBottomBarWhenPushed"]
 - !private ["CSo11UIResponder", "image"]
 - !private ["CSo11UIResponder", "indexPathForSelectedRow"]
 - ["CSo11UIResponder", "init"]
@@ -1463,6 +1477,7 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "controllerWillChangeContent"]
 - ["PSo20UIScrollViewDelegate", "didReceiveMemoryWarning"]
 - ["PSo20UIScrollViewDelegate", "fetchedResultController"]
+- !private ["PSo20UIScrollViewDelegate", "hidesBottomBarWhenPushed"]
 - ["PSo20UIScrollViewDelegate", "init"]
 - !private ["PSo20UIScrollViewDelegate", "navigationController"]
 - !private ["PSo20UIScrollViewDelegate", "navigationItem"]
@@ -1504,6 +1519,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - ["PSo16UIStateRestoring", "fetchedResultController"]
 - !private ["PSo16UIStateRestoring", "hidesBarsOnSwipe"]
+- !private ["PSo16UIStateRestoring", "hidesBottomBarWhenPushed"]
 - ["PSo16UIStateRestoring", "init"]
 - !private ["PSo16UIStateRestoring", "navigationController"]
 - !private ["PSo16UIStateRestoring", "navigationItem"]
@@ -1622,6 +1638,7 @@ depends-member:
 - ["PSo21UITableViewDataSource", "controllerWillChangeContent"]
 - ["PSo21UITableViewDataSource", "didReceiveMemoryWarning"]
 - ["PSo21UITableViewDataSource", "fetchedResultController"]
+- !private ["PSo21UITableViewDataSource", "hidesBottomBarWhenPushed"]
 - ["PSo21UITableViewDataSource", "init"]
 - !private ["PSo21UITableViewDataSource", "navigationController"]
 - !private ["PSo21UITableViewDataSource", "navigationItem"]
@@ -1661,6 +1678,7 @@ depends-member:
 - ["PSo19UITableViewDelegate", "controllerWillChangeContent"]
 - ["PSo19UITableViewDelegate", "didReceiveMemoryWarning"]
 - ["PSo19UITableViewDelegate", "fetchedResultController"]
+- !private ["PSo19UITableViewDelegate", "hidesBottomBarWhenPushed"]
 - ["PSo19UITableViewDelegate", "init"]
 - !private ["PSo19UITableViewDelegate", "navigationController"]
 - !private ["PSo19UITableViewDelegate", "navigationItem"]
@@ -1714,6 +1732,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "estimatedRowHeight"]
 - ["PSo18UITraitEnvironment", "fetchedResultController"]
 - !private ["PSo18UITraitEnvironment", "hidesBarsOnSwipe"]
+- !private ["PSo18UITraitEnvironment", "hidesBottomBarWhenPushed"]
 - !private ["PSo18UITraitEnvironment", "image"]
 - !private ["PSo18UITraitEnvironment", "indexPathForSelectedRow"]
 - ["PSo18UITraitEnvironment", "init"]
@@ -1801,6 +1820,7 @@ depends-member:
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "fetchedResultController"]
 - !private ["CSo16UIViewController", "hidesBarsOnSwipe"]
+- !private ["CSo16UIViewController", "hidesBottomBarWhenPushed"]
 - ["CSo16UIViewController", "init"]
 - !private ["CSo16UIViewController", "navigationController"]
 - !private ["CSo16UIViewController", "navigationItem"]

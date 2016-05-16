@@ -6,51 +6,53 @@ provides-nominal:
 provides-member:
 - ["C7FoodPin11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationWillTerminate"
-- "saveContext"
+- "window"
 - "managedObjectContext"
+- "saveContext"
 - "applicationWillResignActive"
-- "applicationDidBecomeActive"
-- "persistentStoreCoordinator"
-- "applicationDocumentsDirectory"
 - "managedObjectModel"
 - "application"
+- "applicationDidBecomeActive"
 - "applicationWillEnterForeground"
-- "window"
+- "applicationWillTerminate"
+- "applicationDocumentsDirectory"
 - "applicationDidEnterBackground"
+- "persistentStoreCoordinator"
 depends-top-level:
-- "NSManagedObjectModel"
-- "NSObject"
-- !private "NSFileManager"
-- "AppDelegate"
-- !private "NSLocalizedFailureReasonErrorKey"
-- "StringLiteralType"
-- !private "/"
 - !private "UINavigationBar"
-- "UIResponder"
-- "NSPersistentStoreCoordinator"
-- !private "abort"
-- "NSURL"
-- "AnyObject"
-- !private "BooleanLiteralType"
-- "NSManagedObjectContext"
-- !private "NSBundle"
-- !private "NSSQLiteStoreType"
-- "Bool"
-- !private "NSForegroundColorAttributeName"
-- !private "String"
-- !private "UIFont"
-- !private "NSUnderlyingErrorKey"
-- !private "NSLog"
-- !private "Dictionary"
-- !private "NSLocalizedDescriptionKey"
-- !private "NSError"
-- "UIApplication"
-- !private "-"
 - "UIWindow"
+- "StringLiteralType"
+- "NSObject"
 - "UIApplicationDelegate"
-- !private "NSFontAttributeName"
+- !private "UIImage"
+- "Bool"
+- "UIApplication"
+- "NSManagedObjectContext"
+- "NSManagedObjectModel"
+- !private "Dictionary"
+- !private "NSForegroundColorAttributeName"
+- !private "NSLocalizedDescriptionKey"
+- !private "NSLog"
+- !private "-"
 - !private "UIColor"
+- !private "UITabBar"
+- !private "/"
+- !private "UIFont"
+- "AppDelegate"
+- !private "NSUnderlyingErrorKey"
+- !private "abort"
+- !private "NSFontAttributeName"
+- !private "BooleanLiteralType"
+- !private "NSBundle"
+- "NSURL"
+- !private "String"
+- !private "NSLocalizedFailureReasonErrorKey"
+- "AnyObject"
+- "UIResponder"
+- !private "NSError"
+- !private "NSFileManager"
+- "NSPersistentStoreCoordinator"
+- !private "NSSQLiteStoreType"
 depends-member:
 - !private ["PSs9AnyObject", "AnyObject"]
 - !private ["PSs9AnyObject", "NSBundle"]
@@ -70,7 +72,9 @@ depends-member:
 - !private ["PSs9AnyObject", "UIApplication"]
 - !private ["PSs9AnyObject", "UIColor"]
 - !private ["PSs9AnyObject", "UIFont"]
+- !private ["PSs9AnyObject", "UIImage"]
 - !private ["PSs9AnyObject", "UINavigationBar"]
+- !private ["PSs9AnyObject", "UITabBar"]
 - !private ["PSs9AnyObject", "URLByAppendingPathComponent"]
 - !private ["PSs9AnyObject", "URLForResource"]
 - !private ["PSs9AnyObject", "URLsForDirectory"]
@@ -91,6 +95,7 @@ depends-member:
 - ["PSs9AnyObject", "applicationWillEnterForeground"]
 - ["PSs9AnyObject", "applicationWillResignActive"]
 - ["PSs9AnyObject", "applicationWillTerminate"]
+- !private ["PSs9AnyObject", "backgroundImage"]
 - !private ["PSs9AnyObject", "barTintColor"]
 - !private ["PSs9AnyObject", "defaultManager"]
 - !private ["PSs9AnyObject", "deinit"]
@@ -134,7 +139,9 @@ depends-member:
 - ["C7FoodPin11AppDelegate", "UIApplication"]
 - !private ["C7FoodPin11AppDelegate", "UIColor"]
 - !private ["C7FoodPin11AppDelegate", "UIFont"]
+- !private ["C7FoodPin11AppDelegate", "UIImage"]
 - !private ["C7FoodPin11AppDelegate", "UINavigationBar"]
+- !private ["C7FoodPin11AppDelegate", "UITabBar"]
 - ["C7FoodPin11AppDelegate", "UIWindow"]
 - !private ["C7FoodPin11AppDelegate", "abort"]
 - ["C7FoodPin11AppDelegate", "application"]
@@ -204,7 +211,9 @@ depends-member:
 - !private ["PSs11CVarArgType", "UIApplication"]
 - !private ["PSs11CVarArgType", "UIColor"]
 - !private ["PSs11CVarArgType", "UIFont"]
+- !private ["PSs11CVarArgType", "UIImage"]
 - !private ["PSs11CVarArgType", "UINavigationBar"]
+- !private ["PSs11CVarArgType", "UITabBar"]
 - !private ["PSs11CVarArgType", "URLByAppendingPathComponent"]
 - !private ["PSs11CVarArgType", "URLForResource"]
 - !private ["PSs11CVarArgType", "URLsForDirectory"]
@@ -225,6 +234,7 @@ depends-member:
 - ["PSs11CVarArgType", "applicationWillEnterForeground"]
 - ["PSs11CVarArgType", "applicationWillResignActive"]
 - ["PSs11CVarArgType", "applicationWillTerminate"]
+- !private ["PSs11CVarArgType", "backgroundImage"]
 - !private ["PSs11CVarArgType", "barTintColor"]
 - !private ["PSs11CVarArgType", "defaultManager"]
 - !private ["PSs11CVarArgType", "hasChanges"]
@@ -292,7 +302,9 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "UIApplication"]
 - !private ["PSs23CustomStringConvertible", "UIColor"]
 - !private ["PSs23CustomStringConvertible", "UIFont"]
+- !private ["PSs23CustomStringConvertible", "UIImage"]
 - !private ["PSs23CustomStringConvertible", "UINavigationBar"]
+- !private ["PSs23CustomStringConvertible", "UITabBar"]
 - !private ["PSs23CustomStringConvertible", "URLByAppendingPathComponent"]
 - !private ["PSs23CustomStringConvertible", "URLForResource"]
 - !private ["PSs23CustomStringConvertible", "URLsForDirectory"]
@@ -315,6 +327,7 @@ depends-member:
 - ["PSs23CustomStringConvertible", "applicationWillEnterForeground"]
 - ["PSs23CustomStringConvertible", "applicationWillResignActive"]
 - ["PSs23CustomStringConvertible", "applicationWillTerminate"]
+- !private ["PSs23CustomStringConvertible", "backgroundImage"]
 - !private ["PSs23CustomStringConvertible", "barTintColor"]
 - !private ["PSs23CustomStringConvertible", "count"]
 - !private ["PSs23CustomStringConvertible", "defaultManager"]
@@ -370,7 +383,9 @@ depends-member:
 - !private ["PSs9Equatable", "UIApplication"]
 - !private ["PSs9Equatable", "UIColor"]
 - !private ["PSs9Equatable", "UIFont"]
+- !private ["PSs9Equatable", "UIImage"]
 - !private ["PSs9Equatable", "UINavigationBar"]
+- !private ["PSs9Equatable", "UITabBar"]
 - !private ["PSs9Equatable", "URLByAppendingPathComponent"]
 - !private ["PSs9Equatable", "URLForResource"]
 - !private ["PSs9Equatable", "URLsForDirectory"]
@@ -393,6 +408,7 @@ depends-member:
 - ["PSs9Equatable", "applicationWillEnterForeground"]
 - ["PSs9Equatable", "applicationWillResignActive"]
 - ["PSs9Equatable", "applicationWillTerminate"]
+- !private ["PSs9Equatable", "backgroundImage"]
 - !private ["PSs9Equatable", "barTintColor"]
 - !private ["PSs9Equatable", "defaultManager"]
 - !private ["PSs9Equatable", "hasChanges"]
@@ -444,7 +460,9 @@ depends-member:
 - !private ["PSs8Hashable", "UIApplication"]
 - !private ["PSs8Hashable", "UIColor"]
 - !private ["PSs8Hashable", "UIFont"]
+- !private ["PSs8Hashable", "UIImage"]
 - !private ["PSs8Hashable", "UINavigationBar"]
+- !private ["PSs8Hashable", "UITabBar"]
 - !private ["PSs8Hashable", "URLByAppendingPathComponent"]
 - !private ["PSs8Hashable", "URLForResource"]
 - !private ["PSs8Hashable", "URLsForDirectory"]
@@ -466,6 +484,7 @@ depends-member:
 - ["PSs8Hashable", "applicationWillEnterForeground"]
 - ["PSs8Hashable", "applicationWillResignActive"]
 - ["PSs8Hashable", "applicationWillTerminate"]
+- !private ["PSs8Hashable", "backgroundImage"]
 - !private ["PSs8Hashable", "barTintColor"]
 - !private ["PSs8Hashable", "defaultManager"]
 - !private ["PSs8Hashable", "hasChanges"]
@@ -532,6 +551,7 @@ depends-member:
 - !private ["CSo8NSBundle", "mainBundle"]
 - !private ["PSo8NSCoding", "URLByAppendingPathComponent"]
 - !private ["PSo8NSCoding", "appearance"]
+- !private ["PSo8NSCoding", "backgroundImage"]
 - !private ["PSo8NSCoding", "barTintColor"]
 - !private ["PSo8NSCoding", "hasChanges"]
 - !private ["PSo8NSCoding", "init"]
@@ -583,7 +603,9 @@ depends-member:
 - ["CSo8NSObject", "UIApplication"]
 - !private ["CSo8NSObject", "UIColor"]
 - !private ["CSo8NSObject", "UIFont"]
+- !private ["CSo8NSObject", "UIImage"]
 - !private ["CSo8NSObject", "UINavigationBar"]
+- !private ["CSo8NSObject", "UITabBar"]
 - ["CSo8NSObject", "UIWindow"]
 - !private ["CSo8NSObject", "URLByAppendingPathComponent"]
 - !private ["CSo8NSObject", "URLForResource"]
@@ -605,6 +627,7 @@ depends-member:
 - ["CSo8NSObject", "applicationWillEnterForeground"]
 - ["CSo8NSObject", "applicationWillResignActive"]
 - ["CSo8NSObject", "applicationWillTerminate"]
+- !private ["CSo8NSObject", "backgroundImage"]
 - !private ["CSo8NSObject", "barTintColor"]
 - !private ["CSo8NSObject", "defaultManager"]
 - !private ["CSo8NSObject", "hasChanges"]
@@ -643,7 +666,9 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "UIApplication"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UIFont"]
+- !private ["PSo16NSObjectProtocol", "UIImage"]
 - !private ["PSo16NSObjectProtocol", "UINavigationBar"]
+- !private ["PSo16NSObjectProtocol", "UITabBar"]
 - !private ["PSo16NSObjectProtocol", "URLByAppendingPathComponent"]
 - !private ["PSo16NSObjectProtocol", "URLForResource"]
 - !private ["PSo16NSObjectProtocol", "URLsForDirectory"]
@@ -664,6 +689,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "applicationWillEnterForeground"]
 - ["PSo16NSObjectProtocol", "applicationWillResignActive"]
 - ["PSo16NSObjectProtocol", "applicationWillTerminate"]
+- !private ["PSo16NSObjectProtocol", "backgroundImage"]
 - !private ["PSo16NSObjectProtocol", "barTintColor"]
 - !private ["PSo16NSObjectProtocol", "defaultManager"]
 - !private ["PSo16NSObjectProtocol", "hasChanges"]
@@ -738,14 +764,18 @@ depends-member:
 - !private ["PSs30StringInterpolationConvertible", "init"]
 - !private ["PSs24StringLiteralConvertible", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "appearance"]
+- !private ["PSo29UIAccessibilityIdentification", "backgroundImage"]
 - !private ["PSo29UIAccessibilityIdentification", "barTintColor"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "tintColor"]
 - !private ["PSo29UIAccessibilityIdentification", "titleTextAttributes"]
 - !private ["PSo12UIAppearance", "appearance"]
+- !private ["PSo12UIAppearance", "backgroundImage"]
 - !private ["PSo12UIAppearance", "barTintColor"]
 - !private ["PSo12UIAppearance", "tintColor"]
 - !private ["PSo12UIAppearance", "titleTextAttributes"]
 - !private ["PSo21UIAppearanceContainer", "appearance"]
+- !private ["PSo21UIAppearanceContainer", "backgroundImage"]
 - !private ["PSo21UIAppearanceContainer", "barTintColor"]
 - !private ["PSo21UIAppearanceContainer", "tintColor"]
 - !private ["PSo21UIAppearanceContainer", "titleTextAttributes"]
@@ -769,7 +799,9 @@ depends-member:
 - !private ["PSo21UIApplicationDelegate", "UIApplication"]
 - !private ["PSo21UIApplicationDelegate", "UIColor"]
 - !private ["PSo21UIApplicationDelegate", "UIFont"]
+- !private ["PSo21UIApplicationDelegate", "UIImage"]
 - !private ["PSo21UIApplicationDelegate", "UINavigationBar"]
+- !private ["PSo21UIApplicationDelegate", "UITabBar"]
 - !private ["PSo21UIApplicationDelegate", "abort"]
 - ["PSo21UIApplicationDelegate", "application"]
 - ["PSo21UIApplicationDelegate", "applicationDidBecomeActive"]
@@ -796,18 +828,22 @@ depends-member:
 - !private ["CSo7UIColor", "init"]
 - !private ["CSo7UIColor", "whiteColor"]
 - !private ["PSo17UICoordinateSpace", "appearance"]
+- !private ["PSo17UICoordinateSpace", "backgroundImage"]
 - !private ["PSo17UICoordinateSpace", "barTintColor"]
 - !private ["PSo17UICoordinateSpace", "tintColor"]
 - !private ["PSo17UICoordinateSpace", "titleTextAttributes"]
 - !private ["PSo13UIDynamicItem", "appearance"]
+- !private ["PSo13UIDynamicItem", "backgroundImage"]
 - !private ["PSo13UIDynamicItem", "barTintColor"]
 - !private ["PSo13UIDynamicItem", "tintColor"]
 - !private ["PSo13UIDynamicItem", "titleTextAttributes"]
 - !private ["PSo18UIFocusEnvironment", "appearance"]
+- !private ["PSo18UIFocusEnvironment", "backgroundImage"]
 - !private ["PSo18UIFocusEnvironment", "barTintColor"]
 - !private ["PSo18UIFocusEnvironment", "tintColor"]
 - !private ["PSo18UIFocusEnvironment", "titleTextAttributes"]
 - !private ["CSo6UIFont", "init"]
+- !private ["CSo7UIImage", "init"]
 - !private ["CSo15UINavigationBar", "appearance"]
 - !private ["CSo15UINavigationBar", "barTintColor"]
 - !private ["CSo15UINavigationBar", "tintColor"]
@@ -833,7 +869,9 @@ depends-member:
 - ["CSo11UIResponder", "UIApplication"]
 - !private ["CSo11UIResponder", "UIColor"]
 - !private ["CSo11UIResponder", "UIFont"]
+- !private ["CSo11UIResponder", "UIImage"]
 - !private ["CSo11UIResponder", "UINavigationBar"]
+- !private ["CSo11UIResponder", "UITabBar"]
 - ["CSo11UIResponder", "UIWindow"]
 - !private ["CSo11UIResponder", "abort"]
 - !private ["CSo11UIResponder", "appearance"]
@@ -851,6 +889,7 @@ depends-member:
 - ["CSo11UIResponder", "applicationWillEnterForeground"]
 - ["CSo11UIResponder", "applicationWillResignActive"]
 - ["CSo11UIResponder", "applicationWillTerminate"]
+- !private ["CSo11UIResponder", "backgroundImage"]
 - !private ["CSo11UIResponder", "barTintColor"]
 - ["CSo11UIResponder", "init"]
 - ["CSo11UIResponder", "managedObjectContext"]
@@ -867,11 +906,17 @@ depends-member:
 - ["CSo11UIResponder", "window"]
 - ["CSo11UIResponder", ""]
 - !private ["OSC16UIStatusBarStyle", "LightContent"]
+- !private ["CSo8UITabBar", "appearance"]
+- !private ["CSo8UITabBar", "backgroundImage"]
+- !private ["CSo8UITabBar", "barTintColor"]
+- !private ["CSo8UITabBar", "tintColor"]
 - !private ["PSo18UITraitEnvironment", "appearance"]
+- !private ["PSo18UITraitEnvironment", "backgroundImage"]
 - !private ["PSo18UITraitEnvironment", "barTintColor"]
 - !private ["PSo18UITraitEnvironment", "tintColor"]
 - !private ["PSo18UITraitEnvironment", "titleTextAttributes"]
 - !private ["CSo6UIView", "appearance"]
+- !private ["CSo6UIView", "backgroundImage"]
 - !private ["CSo6UIView", "barTintColor"]
 - !private ["CSo6UIView", "tintColor"]
 - !private ["CSo6UIView", "titleTextAttributes"]
@@ -903,6 +948,7 @@ depends-member:
 - !private ["PSs24_DestructorSafeContainer", "count"]
 - !private ["PSs24_DestructorSafeContainer", "subscript"]
 - !private ["PSs32_FileReferenceLiteralConvertible", "URLByAppendingPathComponent"]
+- !private ["PSs24_ImageLiteralConvertible", "init"]
 - !private ["PSs14_Incrementable", "Distance"]
 - !private ["PSs14_Incrementable", "IntegerLiteralType"]
 - !private ["PSs22_IntegerArithmeticType", "Distance"]
@@ -933,6 +979,7 @@ depends-member:
 - !private ["PSs12_Reflectable", "Value"]
 - !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
 - !private ["PSs12_Reflectable", "appearance"]
+- !private ["PSs12_Reflectable", "backgroundImage"]
 - !private ["PSs12_Reflectable", "barTintColor"]
 - !private ["PSs12_Reflectable", "count"]
 - !private ["PSs12_Reflectable", "init"]
@@ -1032,9 +1079,11 @@ depends-nominal:
 - !private "PSo13UIDynamicItem"
 - !private "PSo18UIFocusEnvironment"
 - !private "CSo6UIFont"
+- !private "CSo7UIImage"
 - !private "CSo15UINavigationBar"
 - "CSo11UIResponder"
 - !private "OSC16UIStatusBarStyle"
+- !private "CSo8UITabBar"
 - !private "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - !private "Su"
@@ -1055,6 +1104,7 @@ depends-nominal:
 - !private "PSs24_ColorLiteralConvertible"
 - !private "PSs24_DestructorSafeContainer"
 - !private "PSs32_FileReferenceLiteralConvertible"
+- !private "PSs24_ImageLiteralConvertible"
 - !private "PSs14_Incrementable"
 - !private "PSs22_IntegerArithmeticType"
 - !private "PSs12_IntegerType"
@@ -1071,8 +1121,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
 interface-hash: "50424826610a439f1d5ea1b646a93b2f"

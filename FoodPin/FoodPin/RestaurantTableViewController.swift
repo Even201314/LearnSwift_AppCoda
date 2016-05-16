@@ -123,6 +123,7 @@ class RestaurantTableViewController: UITableViewController,UpdateRestaurant,NSFe
                 destinationController.restaurant = restaurants[indexPath.row]
                 destinationController.restaurantIndex = indexPath.row
                 destinationController.updateRestaurant = self
+                destinationController.hidesBottomBarWhenPushed = true
             }
         }
     }
