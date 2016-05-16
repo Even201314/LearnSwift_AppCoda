@@ -272,4 +272,40 @@ SWIFT_CLASS("_TtC7FoodPin20ReviewViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIPageControl;
+
+SWIFT_CLASS("_TtC7FoodPin32WalkthroughContentViewController")
+@interface WalkthroughContentViewController : UIViewController
+@property (nonatomic, strong) IBOutlet UILabel * __null_unspecified headingLabel;
+@property (nonatomic, strong) IBOutlet UILabel * __null_unspecified contentLabel;
+@property (nonatomic, strong) IBOutlet UIImageView * __null_unspecified contentImageView;
+@property (nonatomic, strong) IBOutlet UIPageControl * __null_unspecified pageControl;
+@property (nonatomic, strong) IBOutlet UIButton * __null_unspecified nextButton;
+@property (nonatomic) NSInteger index;
+@property (nonatomic, copy) NSString * __nonnull heading;
+@property (nonatomic, copy) NSString * __nonnull imageFile;
+@property (nonatomic, copy) NSString * __nonnull content;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (IBAction)nextButtonTapped:(UIButton * __nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC7FoodPin29WalkthroughPageViewController")
+@interface WalkthroughPageViewController : UIPageViewController <UIPageViewControllerDataSource>
+@property (nonatomic, copy) NSArray<NSString *> * __nonnull pageHeadings;
+@property (nonatomic, copy) NSArray<NSString *> * __nonnull pageImages;
+@property (nonatomic, copy) NSArray<NSString *> * __nonnull pageContent;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (UIViewController * __nullable)pageViewController:(UIPageViewController * __nonnull)pageViewController viewControllerBeforeViewController:(UIViewController * __nonnull)viewController;
+- (UIViewController * __nullable)pageViewController:(UIPageViewController * __nonnull)pageViewController viewControllerAfterViewController:(UIViewController * __nonnull)viewController;
+- (WalkthroughContentViewController * __nullable)viewControllerAtIndex:(NSInteger)index;
+- (void)forward:(NSInteger)index;
+- (nonnull instancetype)initWithTransitionStyle:(UIPageViewControllerTransitionStyle)style navigationOrientation:(UIPageViewControllerNavigationOrientation)navigationOrientation options:(NSDictionary<NSString *, id> * __nullable)options OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 #pragma clang diagnostic pop

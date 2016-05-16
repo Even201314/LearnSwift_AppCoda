@@ -13,6 +13,8 @@
 		309B2F1F1CE863A400FA6AAF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309B2F1E1CE863A400FA6AAF /* MapViewController.swift */; };
 		F91CCC7B1CE9651B0035B4FB /* AddRestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91CCC7A1CE9651B0035B4FB /* AddRestaurantTableViewController.swift */; };
 		F91CCC801CE986D30035B4FB /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F91CCC7E1CE986D30035B4FB /* FoodPin.xcdatamodeld */; };
+		F91CCC821CE9AF0C0035B4FB /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91CCC811CE9AF0C0035B4FB /* WalkthroughContentViewController.swift */; };
+		F91CCC841CE9B0500035B4FB /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91CCC831CE9B0500035B4FB /* WalkthroughPageViewController.swift */; };
 		F92E3BEC1CDB09FD002E9A63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92E3BEB1CDB09FD002E9A63 /* AppDelegate.swift */; };
 		F92E3BF11CDB09FD002E9A63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F92E3BEF1CDB09FD002E9A63 /* Main.storyboard */; };
 		F92E3BF31CDB09FD002E9A63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F92E3BF21CDB09FD002E9A63 /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 		309B2F1E1CE863A400FA6AAF /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F91CCC7A1CE9651B0035B4FB /* AddRestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRestaurantTableViewController.swift; sourceTree = "<group>"; };
 		F91CCC7F1CE986D30035B4FB /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
+		F91CCC811CE9AF0C0035B4FB /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		F91CCC831CE9B0500035B4FB /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		F92E3BE81CDB09FD002E9A63 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F92E3BEB1CDB09FD002E9A63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F92E3BF01CDB09FD002E9A63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 				304B3C671CE7771B0058C423 /* ReviewViewController.swift */,
 				309B2F1E1CE863A400FA6AAF /* MapViewController.swift */,
 				F91CCC7A1CE9651B0035B4FB /* AddRestaurantTableViewController.swift */,
+				F91CCC831CE9B0500035B4FB /* WalkthroughPageViewController.swift */,
+				F91CCC811CE9AF0C0035B4FB /* WalkthroughContentViewController.swift */,
 				F92E3BEF1CDB09FD002E9A63 /* Main.storyboard */,
 				F92E3BF21CDB09FD002E9A63 /* Assets.xcassets */,
 				F92E3BF41CDB09FD002E9A63 /* LaunchScreen.storyboard */,
@@ -181,6 +187,8 @@
 				F92E3BFE1CDB0ACB002E9A63 /* RestaurantTableViewController.swift in Sources */,
 				304B3C681CE7771B0058C423 /* ReviewViewController.swift in Sources */,
 				F92E3C291CDC497F002E9A63 /* RestaurantTableViewCell.swift in Sources */,
+				F91CCC821CE9AF0C0035B4FB /* WalkthroughContentViewController.swift in Sources */,
+				F91CCC841CE9B0500035B4FB /* WalkthroughPageViewController.swift in Sources */,
 				F91CCC801CE986D30035B4FB /* FoodPin.xcdatamodeld in Sources */,
 				F92E3C2D1CE318ED002E9A63 /* RestaurantDetailTableViewCell.swift in Sources */,
 				30498FC81CE22F63008E9BF4 /* RestaurantDetailViewController.swift in Sources */,
