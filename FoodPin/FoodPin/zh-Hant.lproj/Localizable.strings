@@ -1,0 +1,15 @@
+/* Location Field */
+"Location" = "地址";
+
+/* Name Field */
+"Name" = "名字";
+
+/* No, I haven't been here */
+"No" = "沒有";
+
+/* Phone Field */
+"Phone" = "電話號碼";
+
+/* Type Field */
+"Type" = "類別";
+

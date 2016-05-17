@@ -1,0 +1,15 @@
+/* Location Field */
+"Location" = "Ort";
+
+/* Name Field */
+"Name" = "Name";
+
+/* No, I haven't been here */
+"No" = "Nein";
+
+/* Phone Field */
+"Phone" = "Telefon";
+
+/* Type Field */
+"Type" = "Type";
+
